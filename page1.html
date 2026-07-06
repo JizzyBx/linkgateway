@@ -7,338 +7,120 @@
   <title>Jizzy B - Getting Your Download Ready...</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background-color: #ffffff;
-      color: #222222;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .gta-logo {
-      display: block;
-      width: 78px;
-      height: 78px;
-      margin: 0 auto 6px;
-      animation: floatLogo 2.8s ease-in-out infinite;
-      filter: drop-shadow(0 4px 14px rgba(0, 191, 255, 0.45));
-      user-select: none;
-    }
-
-    @keyframes floatLogo {
-      0%, 100% { transform: translateY(0px) rotate(-1deg); }
-      50%       { transform: translateY(-10px) rotate(1deg); }
-    }
-
-    .main-card {
-      width: 92%;
-      max-width: 420px;
-      background: #f4f4f4;
-      border: 2px solid #ccc;
-      border-radius: 14px;
-      padding: 20px 18px 16px;
-      text-align: center;
-      margin: 14px auto;
-      position: relative;
-    }
-
-    .main-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 15%; right: 15%;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, skyblue, transparent);
-      border-radius: 3px;
-    }
-
-    .card-brand { font-size: 1.4em; font-weight: 900; color: #222; letter-spacing: 1px; margin-bottom: 2px; }
-    .card-brand span { color: skyblue; }
-    .card-sub { font-size: 0.72em; color: #999; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-
-    .step-badge {
-      display: inline-block;
-      background: skyblue;
-      color: #fff;
-      font-size: 0.65em;
-      font-weight: bold;
-      padding: 3px 10px;
-      border-radius: 50px;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .hurry-hint { font-size: 0.72em; color: #e55; font-weight: bold; margin-bottom: 8px; line-height: 1.5; }
-
-    #dl-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 11px 28px;
-      background-color: skyblue;
-      color: #fff;
-      border: none;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 14px;
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto 10px;
-      cursor: not-allowed;
-      opacity: 0.5;
-      transition: opacity 0.4s, background-color 0.3s, transform 0.1s;
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-    }
-
-    #dl-btn.unlocked { cursor: pointer; opacity: 1; }
-    #dl-btn.unlocked:hover { background-color: #00aacc; }
-    #dl-btn.unlocked:active { transform: scale(0.97); }
-    #dl-btn.clicked { background-color: black !important; color: #fff; cursor: pointer; opacity: 1; }
-    #dl-btn.clicked::after { display: none; }
-
-    #dl-btn.unlocked::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 60%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      animation: shimmer 2s infinite;
-    }
-
-    @keyframes shimmer {
-      0%   { left: -100%; }
-      100% { left: 200%; }
-    }
-
-    .prog-wrap { width: 100%; max-width: 320px; margin: 0 auto; }
-    .prog-timer { font-size: 0.72em; color: #888; letter-spacing: 1px; text-transform: uppercase; text-align: center; margin-bottom: 5px; font-weight: bold; }
-    .prog-timer span { color: skyblue; font-size: 1.4em; }
-
-    .prog-track { width: 100%; height: 6px; background: #ddd; border-radius: 6px; overflow: hidden; margin-bottom: 6px; }
-    .prog-fill { height: 100%; width: 100%; background: linear-gradient(90deg, skyblue, #007bff); border-radius: 6px; transition: width 1s linear; }
-
-    .prog-steps { height: 40px; overflow: hidden; position: relative; text-align: center; margin-bottom: 4px; }
-    .prog-step { position: absolute; width: 100%; left: 0; font-size: 0.70em; font-weight: bold; color: #555; transform: translateY(100%); opacity: 0; transition: transform 0.38s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease; white-space: normal; padding: 0 4px; line-height: 1.5; }
-    .prog-step.active { transform: translateY(0%); opacity: 1; }
-    .prog-step.exit { transform: translateY(-100%); opacity: 0; }
-
-    .tutorial-link { display: block; font-size: 0.75em; font-weight: bold; color: #007bff; text-decoration: none; margin-top: 8px; text-align: center; }
-    .tutorial-link:hover { color: #000; }
-
-    .footer { font-size: 11px; color: #bbb; text-align: center; padding-bottom: 18px; }
-    .footer span { color: #007bff; font-weight: bold; }
+    body { background: #fff; color: #222; font-family: Arial, sans-serif; font-size: 13px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+    .gta-logo { display: block; width: 78px; height: 78px; margin: 0 auto 6px; animation: floatLogo 2.8s ease-in-out infinite; filter: drop-shadow(0 4px 14px rgba(0,191,255,0.45)); user-select: none; }
+    @keyframes floatLogo { 0%,100%{transform:translateY(0px) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)} }
+    .main-card { width: 92%; max-width: 420px; background: #f4f4f4; border: 2px solid #ccc; border-radius: 14px; padding: 20px 18px 16px; text-align: center; margin: 14px auto; position: relative; }
+    .main-card::before { content:''; position:absolute; top:0; left:15%; right:15%; height:3px; background:linear-gradient(90deg,transparent,skyblue,transparent); border-radius:3px; }
+    .card-brand { font-size:1.4em; font-weight:900; color:#222; letter-spacing:1px; margin-bottom:2px; }
+    .card-brand span { color:skyblue; }
+    .card-sub { font-size:0.72em; color:#999; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+    .step-badge { display:inline-block; background:skyblue; color:#fff; font-size:0.65em; font-weight:bold; padding:3px 10px; border-radius:50px; letter-spacing:1px; margin-bottom:8px; }
+    .hurry-hint { font-size:0.72em; color:#e55; font-weight:bold; margin-bottom:8px; line-height:1.5; }
+    #dl-btn { display:flex; align-items:center; justify-content:center; gap:6px; padding:11px 28px; background-color:skyblue; color:#fff; border:none; border-radius:50px; font-weight:bold; font-size:14px; width:100%; max-width:300px; margin:0 auto 10px; cursor:not-allowed; opacity:0.5; transition:opacity 0.4s,background-color 0.3s,transform 0.1s; position:relative; overflow:hidden; text-decoration:none; }
+    #dl-btn.unlocked { cursor:pointer; opacity:1; }
+    #dl-btn.unlocked:hover { background-color:#00aacc; }
+    #dl-btn.unlocked:active { transform:scale(0.97); }
+    #dl-btn.clicked { background-color:black!important; color:#fff; cursor:pointer; opacity:1; }
+    #dl-btn.unlocked::after { content:''; position:absolute; top:0; left:-100%; width:60%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent); animation:shimmer 2s infinite; }
+    @keyframes shimmer { 0%{left:-100%}100%{left:200%} }
+    .prog-wrap { width:100%; max-width:320px; margin:0 auto; }
+    .prog-timer { font-size:0.72em; color:#888; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-bottom:5px; font-weight:bold; }
+    .prog-timer span { color:skyblue; font-size:1.4em; }
+    .prog-track { width:100%; height:6px; background:#ddd; border-radius:6px; overflow:hidden; margin-bottom:6px; }
+    .prog-fill { height:100%; width:100%; background:linear-gradient(90deg,skyblue,#007bff); border-radius:6px; transition:width 1s linear; }
+    .prog-steps { height:40px; overflow:hidden; position:relative; text-align:center; margin-bottom:4px; }
+    .prog-step { position:absolute; width:100%; left:0; font-size:0.70em; font-weight:bold; color:#555; transform:translateY(100%); opacity:0; transition:transform 0.38s cubic-bezier(0.22,1,0.36,1),opacity 0.3s ease; white-space:normal; padding:0 4px; line-height:1.5; }
+    .prog-step.active { transform:translateY(0%); opacity:1; }
+    .prog-step.exit { transform:translateY(-100%); opacity:0; }
+    .tutorial-link { display:block; font-size:0.75em; font-weight:bold; color:#007bff; text-decoration:none; margin-top:8px; text-align:center; }
+    .tutorial-link:hover { color:#000; }
+    .footer { font-size:11px; color:#bbb; text-align:center; padding-bottom:18px; }
+    .footer span { color:#007bff; font-weight:bold; }
+    .ad-label { font-size:0.65em; color:#bbb; text-align:center; margin:4px 0; letter-spacing:1px; }
   </style>
 </head>
-
 <body>
 
-  <!-- HILLTOP BANNER AD TOP -->
-  <script>
-  (function(asazv){
-  var d = document,
-      s = d.createElement('script'),
-      l = d.scripts[d.scripts.length - 1];
-  s.settings = asazv || {};
-  s.src = "\/\/relieved-understanding.com\/bfX.VzsndnGHlo0\/YRWJcg\/fejmv9xuNZVU\/l_koPOTWcVxTOdT_YB1XNDjQkCtUNazZE\/5TNWj\/Ua3mMmws";
-  s.async = true;
-  s.referrerPolicy = 'no-referrer-when-downgrade';
-  l.parentNode.insertBefore(s, l);
-  })({})
-  </script>
+<!-- PUSH NOTIFICATION -->
+<script>(function(zejby){var d=document,s=d.createElement('script'),l=d.scripts[d.scripts.length-1];s.settings=zejby||{};s.src="\/\/relieved-understanding.com\/bnX\/V.ssdpGdlC0oYXW\/cj\/QeMmM9HuWZ\/UOlek\/PqT\/ctx\/OKTnc\/1_O\/DkUttaNdzkE-5kNJzqUG4HOrQO";s.async=true;s.referrerPolicy='no-referrer-when-downgrade';l.parentNode.insertBefore(s,l);})({})</script>
 
-  <!-- HILLTOP POPUNDER ANTI ADBLOCK -->
-  <script>
-  (function(options){
-  var d=document,s=d.createElement('script'),l=d.scripts[d.scripts.length-1];s.settings=options||{};s.src="\/\/thoughtfulrefuse.com\/c\/Dv9\/6fb.2E5_lbSUWcQv9\/NjzREr5nN\/jeUu0\/NUSW0U3_MNTrkd2GNwTKQz5C";s.async=true;s.referrerPolicy='no-referrer-when-downgrade';l.parentNode.insertBefore(s,l);
-  })({"scriptSrc":"\/\/thoughtfulrefuse.com\/c\/Dv9\/6fb.2E5_lbSUWcQv9\/NjzREr5nN\/jeUu0\/NUSW0U3_MNTrkd2GNwTKQz5C","window":{"url":"\/\/thoughtfulrefuse.com\/b\/3yVS0.PI3hpXvVbtmQVtJGZtDR0I3bMjTFk\/2pNjTBQW1KL\/TMcgxKOpTCYA1WNmDAk\/mMcBnTNEy-Y\/zQ0CxIcZ3FRkwm"},"freq":{"qty":3,"period":3600,"scheme":"time","distance":60,"distances":"","pagelim":0,"max":0,"context":"domain","session":false,"sessionKeepAliveTime":0,"sessionExpiration":3600},"misc":{"newTab":true,"under":false,"coverTags":"iframe"},"onlyClickable":false})
-  </script>
+<!-- POPUNDER ANTIBLOCK -->
+<script>(function(options){var d=document,s=d.createElement('script'),l=d.scripts[d.scripts.length-1];s.settings=options||{};s.src="\/\/thoughtfulrefuse.com\/c\/Dv9\/6fb.2E5_lbSUWcQv9\/NjzREr5nN\/jeUu0\/NUSW0U3_MNTrkd2GNwTKQz5C";s.async=true;s.referrerPolicy='no-referrer-when-downgrade';l.parentNode.insertBefore(s,l);})({"scriptSrc":"\/\/thoughtfulrefuse.com\/c\/Dv9\/6fb.2E5_lbSUWcQv9\/NjzREr5nN\/jeUu0\/NUSW0U3_MNTrkd2GNwTKQz5C","window":{"url":"\/\/thoughtfulrefuse.com\/b\/3yVS0.PI3hpXvVbtmQVtJGZtDR0I3bMjTFk\/2pNjTBQW1KL\/TMcgxKOpTCYA1WNmDAk\/mMcBnTNEy-Y\/zQ0CxIcZ3FRkwm"},"freq":{"qty":3,"period":3600,"scheme":"time","distance":60,"distances":"","pagelim":0,"max":0,"context":"domain","session":false,"sessionKeepAliveTime":0,"sessionExpiration":3600},"misc":{"newTab":true,"under":false,"coverTags":"iframe"},"onlyClickable":false})</script>
 
-  <div class="main-card">
+<!-- TOP BANNER -->
+<div class="ad-label">ADVERTISEMENT</div>
+<script>(function(asazv){var d=document,s=d.createElement('script'),l=d.scripts[d.scripts.length-1];s.settings=asazv||{};s.src="\/\/relieved-understanding.com\/bfX.VzsndnGHlo0\/YRWJcg\/fejmv9xuNZVU\/l_koPOTWcVxTOdT_YB1XNDjQkCtUNazZE\/5TNWj\/Ua3mMmws";s.async=true;s.referrerPolicy='no-referrer-when-downgrade';l.parentNode.insertBefore(s,l);})({})</script>
 
-    <svg class="gta-logo" viewBox="0 0 86 86" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="43" cy="43" r="43" fill="#1a1a1a"/>
-      <circle cx="43" cy="43" r="40" fill="none" stroke="skyblue" stroke-width="2.5"/>
-      <circle cx="43" cy="43" r="38" fill="#0d0d0d"/>
-      <clipPath id="circ-clip"><circle cx="43" cy="43" r="38"/></clipPath>
-      <rect x="5" y="5" width="76" height="76" fill="#1a0a00" clip-path="url(#circ-clip)"/>
-      <rect x="5" y="38" width="76" height="43" fill="#0a0a0a" clip-path="url(#circ-clip)"/>
-      <ellipse cx="43" cy="44" rx="32" ry="18" fill="#ff6a00" opacity="0.18" clip-path="url(#circ-clip)"/>
-      <g clip-path="url(#circ-clip)" fill="#111">
-        <rect x="8" y="52" width="5" height="20"/>
-        <rect x="14" y="46" width="4" height="26"/>
-        <rect x="19" y="50" width="6" height="22"/>
-        <rect x="26" y="42" width="5" height="30"/>
-        <rect x="32" y="48" width="4" height="24"/>
-        <rect x="55" y="44" width="5" height="28"/>
-        <rect x="61" y="50" width="6" height="22"/>
-        <rect x="68" y="46" width="4" height="26"/>
-        <rect x="73" y="52" width="5" height="20"/>
-      </g>
-      <rect x="5" y="66" width="76" height="16" fill="#111" clip-path="url(#circ-clip)"/>
-      <rect x="36" y="68" width="14" height="2" rx="1" fill="#ffcc00" clip-path="url(#circ-clip)"/>
-      <rect x="36" y="73" width="14" height="2" rx="1" fill="#ffcc00" clip-path="url(#circ-clip)"/>
-      <text x="43" y="36" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="11" fill="#ff6a00" letter-spacing="3">GTA</text>
-      <text x="43" y="49" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="7.5" fill="#ffffff" letter-spacing="1.5">SAN ANDREAS</text>
-      <text x="43" y="62" text-anchor="middle" font-size="9" fill="#FFD700">★</text>
-      <path id="bottom-arc" d="M 13 65 A 30 30 0 0 0 73 65" fill="none"/>
-      <text font-family="Arial" font-size="5.5" fill="skyblue" font-weight="bold" letter-spacing="1">
-        <textPath href="#bottom-arc" startOffset="20%">JIZZY B (DOGYABHI)</textPath>
-      </text>
-    </svg>
+<div class="main-card">
+  <svg class="gta-logo" viewBox="0 0 86 86" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="43" cy="43" r="43" fill="#1a1a1a"/><circle cx="43" cy="43" r="40" fill="none" stroke="skyblue" stroke-width="2.5"/><circle cx="43" cy="43" r="38" fill="#0d0d0d"/>
+    <clipPath id="cc"><circle cx="43" cy="43" r="38"/></clipPath>
+    <rect x="5" y="5" width="76" height="76" fill="#1a0a00" clip-path="url(#cc)"/><rect x="5" y="38" width="76" height="43" fill="#0a0a0a" clip-path="url(#cc)"/>
+    <ellipse cx="43" cy="44" rx="32" ry="18" fill="#ff6a00" opacity="0.18" clip-path="url(#cc)"/>
+    <g clip-path="url(#cc)" fill="#111"><rect x="8" y="52" width="5" height="20"/><rect x="14" y="46" width="4" height="26"/><rect x="19" y="50" width="6" height="22"/><rect x="26" y="42" width="5" height="30"/><rect x="32" y="48" width="4" height="24"/><rect x="55" y="44" width="5" height="28"/><rect x="61" y="50" width="6" height="22"/><rect x="68" y="46" width="4" height="26"/><rect x="73" y="52" width="5" height="20"/></g>
+    <rect x="5" y="66" width="76" height="16" fill="#111" clip-path="url(#cc)"/>
+    <rect x="36" y="68" width="14" height="2" rx="1" fill="#ffcc00" clip-path="url(#cc)"/><rect x="36" y="73" width="14" height="2" rx="1" fill="#ffcc00" clip-path="url(#cc)"/>
+    <text x="43" y="36" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="11" fill="#ff6a00" letter-spacing="3">GTA</text>
+    <text x="43" y="49" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="7.5" fill="#fff" letter-spacing="1.5">SAN ANDREAS</text>
+    <text x="43" y="62" text-anchor="middle" font-size="9" fill="#FFD700">★</text>
+    <path id="ba" d="M 13 65 A 30 30 0 0 0 73 65" fill="none"/>
+    <text font-family="Arial" font-size="5.5" fill="skyblue" font-weight="bold" letter-spacing="1"><textPath href="#ba" startOffset="20%">JIZZY B (DOGYABHI)</textPath></text>
+  </svg>
 
-    <div class="card-brand">Jizzy B <span>(Dogyabhi)</span></div>
-    <div class="card-sub">GTA San Andreas Mod Pack</div>
-    <div class="step-badge">STEP 1 OF 3</div>
+  <div class="card-brand">Jizzy B <span>(Dogyabhi)</span></div>
+  <div class="card-sub">GTA San Andreas Mod Pack</div>
+  <div class="step-badge">STEP 1 OF 4</div>
+  <p class="hurry-hint">⚡ In a hurry? Click one of the ads — the button unlocks instantly!</p>
 
-    <p class="hurry-hint">
-      ⚡ In a hurry? Click one of the ads above or below — the button unlocks instantly!
-    </p>
+  <button id="dl-btn" onclick="doNext()">⬇ CONTINUE TO STEP 2</button>
 
-    <button id="dl-btn" onclick="doNext()">⬇ CONTINUE TO STEP 2</button>
-
-    <div class="prog-wrap">
-      <div class="prog-timer" id="timer-line">
-        Unlocking in <span id="timer-num">15</span>s
-      </div>
-      <div class="prog-track">
-        <div class="prog-fill" id="prog-fill"></div>
-      </div>
-      <div class="prog-steps">
-        <div class="prog-step" id="step0">📢 Join the Telegram channel for password-free links.</div>
-        <div class="prog-step" id="step1">🎮 Dogyabhi has been making GTA SA mod packs since 2017.</div>
-        <div class="prog-step" id="step2">📁 Check file names match your GPU before installing.</div>
-        <div class="prog-step" id="step3">⚠️ Installing the wrong file may cause your mod pack to crash.</div>
-        <div class="prog-step" id="step4">💬 Having issues? Comment on the YouTube video.</div>
-        <div class="prog-step" id="step5">🔇 Do NOT post the password in YouTube comments.</div>
-        <div class="prog-step" id="step6">🎬 Watch the video at 0.5× speed to find the password.</div>
-      </div>
+  <div class="prog-wrap">
+    <div class="prog-timer" id="timer-line">Unlocking in <span id="timer-num">20</span>s</div>
+    <div class="prog-track"><div class="prog-fill" id="prog-fill"></div></div>
+    <div class="prog-steps">
+      <div class="prog-step" id="step0">📢 Join Telegram for password-free links.</div>
+      <div class="prog-step" id="step1">🎮 Dogyabhi making GTA SA mods since 2017.</div>
+      <div class="prog-step" id="step2">📁 Check file names match your GPU before installing.</div>
+      <div class="prog-step" id="step3">⚠️ Wrong file may cause your modpack to crash.</div>
+      <div class="prog-step" id="step4">💬 Issues? Comment on the YouTube video.</div>
+      <div class="prog-step" id="step5">🔇 Do NOT post the password in comments.</div>
+      <div class="prog-step" id="step6">🎬 Watch at 0.5× speed to catch the password.</div>
     </div>
-
-    <a href="https://dogyabhi.blogspot.com/2023/02/how-to-download-from-my-links-gplink.html?m=1" class="tutorial-link" target="_blank" rel="noopener noreferrer">
-      📖 How to open this download link — Tutorial
-    </a>
-
   </div>
 
-  <!-- HILLTOP BANNER AD BOTTOM -->
-  <script>
-  (function(asazv){
-  var d = document,
-      s = d.createElement('script'),
-      l = d.scripts[d.scripts.length - 1];
-  s.settings = asazv || {};
-  s.src = "\/\/relieved-understanding.com\/bfX.VzsndnGHlo0\/YRWJcg\/fejmv9xuNZVU\/l_koPOTWcVxTOdT_YB1XNDjQkCtUNazZE\/5TNWj\/Ua3mMmws";
-  s.async = true;
-  s.referrerPolicy = 'no-referrer-when-downgrade';
-  l.parentNode.insertBefore(s, l);
-  })({})
-  </script>
+  <a href="https://dogyabhi.blogspot.com/2023/02/how-to-download-from-my-links-gplink.html?m=1" class="tutorial-link" target="_blank">📖 How to open this link — Tutorial</a>
+</div>
 
-  <div class="footer">All rights reserved. <span>Jizzy B (Dogyabhi)</span></div>
+<!-- BOTTOM BANNER -->
+<div class="ad-label">ADVERTISEMENT</div>
+<script>(function(asazv){var d=document,s=d.createElement('script'),l=d.scripts[d.scripts.length-1];s.settings=asazv||{};s.src="\/\/relieved-understanding.com\/bfX.VzsndnGHlo0\/YRWJcg\/fejmv9xuNZVU\/l_koPOTWcVxTOdT_YB1XNDjQkCtUNazZE\/5TNWj\/Ua3mMmws";s.async=true;s.referrerPolicy='no-referrer-when-downgrade';l.parentNode.insertBefore(s,l);})({})</script>
 
-  <script>
-  (function() {
-    var params = new URLSearchParams(window.location.search);
-    var raw = params.get('go');
-    var DEST = '';
+<div class="footer">All rights reserved. <span>Jizzy B (Dogyabhi)</span></div>
 
-    try {
-      if (raw) {
-        var decoded = decodeURIComponent(raw);
-        if (/^https?:\/\/.+/i.test(decoded)) DEST = decoded;
-      }
-    } catch(e) {}
-
-    var btn       = document.getElementById('dl-btn');
-    var fill      = document.getElementById('prog-fill');
-    var timerLine = document.getElementById('timer-line');
-
-    if (!DEST) {
-      btn.textContent = '⚠ Invalid Link';
-      btn.style.background = 'gray';
-      btn.style.opacity = '1';
-      if (timerLine) timerLine.textContent = 'Link not found — go back and try again.';
-      return;
-    }
-
-    var TOTAL_SEC = 15;
-    var remaining = TOTAL_SEC;
-    var unlocked  = false;
-    var activeStep = -1;
-    var steps = [];
-    for (var i = 0; i <= 6; i++) { steps.push(document.getElementById('step' + i)); }
-
-    fill.style.width = '100%';
-
-    function showStep(idx) {
-      if (activeStep >= 0 && steps[activeStep]) {
-        steps[activeStep].classList.remove('active');
-        steps[activeStep].classList.add('exit');
-      }
-      activeStep = idx;
-      if (steps[idx]) {
-        steps[idx].classList.remove('exit');
-        steps[idx].classList.add('active');
-      }
-    }
-
-    showStep(0);
-
-    var stepIdx = 0;
-    var stepInterval = setInterval(function() {
-      stepIdx = (stepIdx + 1) % steps.length;
-      showStep(stepIdx);
-    }, 2100);
-
-    var countdown = setInterval(function() {
-      remaining--;
-      var numEl = document.getElementById('timer-num');
-      if (numEl) numEl.textContent = remaining;
-      fill.style.width = ((remaining / TOTAL_SEC) * 100) + '%';
-      if (remaining <= 0) {
-        clearInterval(countdown);
-        clearInterval(stepInterval);
-        unlockBtn();
-        goNext();
-      }
-    }, 1000);
-
-    function unlockBtn() {
-      if (unlocked) return;
-      unlocked = true;
-      btn.classList.add('unlocked');
-      timerLine.innerHTML = '✅ Unlocked! Click the button to continue.';
-    }
-
-    function goNext() {
-      var next = 'https://jizzybx.github.io/linkgateway/page2.html?go=' + encodeURIComponent(DEST);
-      window.location.href = next;
-    }
-
-    window.addEventListener('blur', function() {
-      setTimeout(function() {
-        if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
-          unlockBtn();
-        }
-      }, 200);
-    });
-
-    function doNext() {
-      if (!unlocked) return;
-      btn.classList.add('clicked');
-      goNext();
-    }
-
-    window.doNext = doNext;
-  })();
-  </script>
-
+<script>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var raw=params.get('go');
+  var DEST='';
+  try{if(raw){var decoded=decodeURIComponent(raw);if(/^https?:\/\/.+/i.test(decoded))DEST=decoded;}}catch(e){}
+  var btn=document.getElementById('dl-btn');
+  var fill=document.getElementById('prog-fill');
+  var timerLine=document.getElementById('timer-line');
+  if(!DEST){btn.textContent='⚠ Invalid Link';btn.style.background='gray';btn.style.opacity='1';if(timerLine)timerLine.textContent='Link not found.';return;}
+  var TOTAL=20,remaining=20,unlocked=false,activeStep=-1;
+  var steps=[];for(var i=0;i<=6;i++){steps.push(document.getElementById('step'+i));}
+  fill.style.width='100%';
+  function showStep(idx){if(activeStep>=0&&steps[activeStep]){steps[activeStep].classList.remove('active');steps[activeStep].classList.add('exit');}activeStep=idx;if(steps[idx]){steps[idx].classList.remove('exit');steps[idx].classList.add('active');}}
+  showStep(0);
+  var stepIdx=0;
+  var stepInt=setInterval(function(){stepIdx=(stepIdx+1)%steps.length;showStep(stepIdx);},2800);
+  var countdown=setInterval(function(){remaining--;var n=document.getElementById('timer-num');if(n)n.textContent=remaining;fill.style.width=((remaining/TOTAL)*100)+'%';if(remaining<=0){clearInterval(countdown);clearInterval(stepInt);unlockBtn();}},1000);
+  function unlockBtn(){if(unlocked)return;unlocked=true;btn.classList.add('unlocked');timerLine.innerHTML='✅ Unlocked! Click to continue.';}
+  window.addEventListener('blur',function(){setTimeout(function(){if(document.activeElement&&document.activeElement.tagName==='IFRAME'){unlockBtn();}},200);});
+  function doNext(){if(!unlocked)return;btn.classList.add('clicked');window.location.href='https://jizzybx.github.io/linkgateway/page2.html?go='+encodeURIComponent(DEST);}
+  window.doNext=doNext;
+})();
+</script>
 </body>
 </html>
