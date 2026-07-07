@@ -208,6 +208,11 @@ body{background:#f0f2f5;color:#222;font-family:'Segoe UI',Arial,sans-serif;font-
 <script>(function(yvzjj){var d=document,s=d.createElement('script'),l=d.scripts[d.scripts.length-1];s.settings=yvzjj||{};s.src="\/\/relieved-understanding.com\/b.XvVpsJdKGklT0JY_WYcg\/telm\/9Nu\/ZoUPlxkuPXT\/ckxyOGTLcR5kM\/DkEYtWNrzSEK5TNaz_kHwGNDQj";s.async=true;s.referrerPolicy='no-referrer-when-downgrade';l.parentNode.insertBefore(s,l);})({})</script>
 </div>
 
+<!-- FOURTH BANNER -->
+<div class="ad-wrap"><div class="ad-label">advertisement</div>
+<script>(function(yvzjj){var d=document,s=d.createElement("script"),l=d.scripts[d.scripts.length-1];s.settings=yvzjj||{};s.src="\/\/relieved-understanding.com\/b.XvVpsJdKGklT0JY_WYcg\/telm\/9Nu\/ZoUPlxkuPXT\/ckxyOGTLcR5kM\/DkEYtWNrzSEK5TNaz_kHwGNDQj";s.async=true;s.referrerPolicy="no-referrer-when-downgrade";l.parentNode.insertBefore(s,l);})({})</script>
+</div>
+
 <div class="social-bar">
   <div class="social-title">⚡ Follow For More</div>
   <ul class="social-list">
@@ -232,35 +237,42 @@ body{background:#f0f2f5;color:#222;font-family:'Segoe UI',Arial,sans-serif;font-
   var timerEl=document.getElementById('timer-num');
   var unlockStatus=document.getElementById('unlock-status');
   var unlockStatus2=document.getElementById('unlock-status2');
-  if(!DEST){nextBtn.textContent='⚠ Invalid Link';nextBtn.style.background='gray';nextBtn.style.opacity='1';return;}
+  if(!DEST){if(nextBtn){nextBtn.textContent='⚠ Invalid Link';nextBtn.style.background='gray';nextBtn.style.opacity='1';}return;}
   var TOTAL=20,remaining=20,unlocked=false,activeStep=-1;
   var steps=[];for(var i=0;i<=6;i++){steps.push(document.getElementById('step'+i));}
-  fill.style.width='100%';
+  if(fill)fill.style.width='100%';
   function showStep(idx){if(activeStep>=0&&steps[activeStep]){steps[activeStep].classList.remove('active');steps[activeStep].classList.add('exit');}activeStep=idx;if(steps[idx]){steps[idx].classList.remove('exit');steps[idx].classList.add('active');}}
   showStep(0);
   var stepIdx=0;
   var stepInt=setInterval(function(){stepIdx=(stepIdx+1)%steps.length;showStep(stepIdx);},2100);
-  var countdown=setInterval(function(){remaining--;if(timerEl)timerEl.textContent=remaining;fill.style.width=((remaining/TOTAL)*100)+'%';if(remaining<=0){clearInterval(countdown);clearInterval(stepInt);unlockAll();}},1000);
-  function unlockAll(){if(unlocked)return;unlocked=true;scrollBtn.classList.add('unlocked');nextBtn.classList.add('unlocked');if(unlockStatus)unlockStatus.textContent='✅ Unlocked! Scroll down or click button.';if(unlockStatus2)unlockStatus2.textContent='✅ Ready! Click to go to Step 4.';}
-  window.addEventListener('blur',function(){setTimeout(function(){if(document.activeElement&&document.activeElement.tagName==='IFRAME'){unlockAll();}},200);});
-  function doScroll(){if(!unlocked)return;document.getElementById('bottom-section').scrollIntoView({behavior:'smooth'});}
-  function doNext(){if(!unlocked)return;nextBtn.classList.add('clicked');// FINAL PAGE - opens drive link directly+encodeURIComponent(DEST);}
+  var countdown=setInterval(function(){
+    remaining--;
+    if(timerEl)timerEl.textContent=remaining;
+    if(fill)fill.style.width=((remaining/TOTAL)*100)+'%';
+    if(remaining<=0){clearInterval(countdown);clearInterval(stepInt);unlockAll();}
+  },1000);
+  function unlockAll(){
+    if(unlocked)return;
+    unlocked=true;
+    if(scrollBtn)scrollBtn.classList.add('unlocked');
+    if(nextBtn)nextBtn.classList.add('unlocked');
+    if(unlockStatus)unlockStatus.textContent='✅ Unlocked! Scroll down or click button.';
+    if(unlockStatus2)unlockStatus2.textContent='✅ Your file is ready! Tap the button below.';
+  }
+  window.addEventListener('blur',function(){
+    setTimeout(function(){
+      if(document.activeElement&&document.activeElement.tagName==='IFRAME'){unlockAll();}
+    },200);
+  });
+  function doScroll(){if(!unlocked)return;var b=document.getElementById('bottom-section');if(b)b.scrollIntoView({behavior:'smooth'});}
+  function doFinal(){
+    if(!unlocked)return;
+    if(nextBtn)nextBtn.classList.add('clicked');
+    window.open(DEST,'_blank');
+  }
   window.doScroll=doScroll;
-  window.doNext=doNext;
+  window.doFinal=doFinal;
 })();
 </script>
 </body>
 </html>
-<script>
-// PAGE 4 OVERRIDE - replaces doNext with doFinal that opens the drive link
-window.doFinal = function(){
-  var params=new URLSearchParams(window.location.search);
-  var raw=params.get('go');
-  var DEST='';
-  try{if(raw){var decoded=decodeURIComponent(raw);if(/^https?:\/\/.+/i.test(decoded))DEST=decoded;}}catch(e){}
-  if(!DEST)return;
-  var btn=document.getElementById('next-btn');
-  if(btn){btn.classList.add('clicked');}
-  window.open(DEST,'_blank');
-};
-</script>
