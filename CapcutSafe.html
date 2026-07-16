@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Scanning File – CapCut Mod APK | Jizzy B</title>
+<meta name="robots" content="noindex"/>
+
+<!-- MONDIAD CLASSIC PUSH -->
+<script async src="https://ss.mrmnd.com/ctatic/df7b8ffd-62c6-4bc8-bbcd-76c19fe0019b.js"></script>
+<!-- MONDIAD POPUNDER -->
+<script async="" src="https://ss.mrmnd.com/popunder.js" data-mndpopid="5a68c54d-a6c3-4d82-9373-4138ab724d7d" data-frequency-cap="2"></script>
+<!-- MONDIAD BANNER JS -->
+<script async src="https://ss.mrmnd.com/banner.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:#050508;
+  color:#e0e0e0;
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow-x:hidden;
+}
+
+/* MATRIX BG */
+body::before{
+  content:'';
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(0,191,255,0.06) 0%,transparent 60%),
+    radial-gradient(ellipse at 0% 100%,rgba(0,100,255,0.04) 0%,transparent 50%),
+    radial-gradient(ellipse at 100% 50%,rgba(0,191,255,0.03) 0%,transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
+
+/* TOPBAR */
+.topbar{
+  width:100%;
+  background:rgba(5,5,10,0.95);
+  border-bottom:1px solid rgba(0,191,255,0.15);
+  padding:10px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+  backdrop-filter:blur(10px);
+}
+.topbar-brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+.topbar-icon{width:28px;height:28px;background:linear-gradient(135deg,#00bfff,#0077cc);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#000}
+.topbar-name{font-size:0.95em;font-weight:800;color:#fff}
+.topbar-name span{color:#00bfff}
+.topbar-status{display:flex;align-items:center;gap:6px;font-size:0.65em;color:#00bfff;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.status-dot{width:6px;height:6px;background:#00ff88;border-radius:50%;animation:blink 1s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* PAGE */
+.page{
+  position:relative;z-index:1;
+  width:100%;max-width:520px;
+  padding:0 14px 40px;
+  display:flex;flex-direction:column;align-items:center;
+}
+
+/* AD SLOTS */
+.ad-wrap{width:100%;text-align:center;margin:14px 0}
+.ad-label{font-size:0.55em;color:rgba(255,255,255,0.15);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+
+/* MAIN SCAN CARD */
+.scan-card{
+  width:100%;
+  background:linear-gradient(160deg,#0a0a14 0%,#080810 100%);
+  border:1px solid rgba(0,191,255,0.15);
+  border-radius:16px;
+  padding:28px 20px;
+  text-align:center;
+  margin:16px 0;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 0 40px rgba(0,191,255,0.06),0 20px 60px rgba(0,0,0,0.5);
+}
+.scan-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:20%;right:20%;height:1px;
+  background:linear-gradient(90deg,transparent,#00bfff,transparent);
+}
+.scan-card::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:20%;right:20%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(0,191,255,0.3),transparent);
+}
+
+/* SHIELD ICON */
+.shield-wrap{
+  width:80px;height:80px;
+  margin:0 auto 16px;
+  position:relative;
+}
+.shield-ring{
+  width:80px;height:80px;
+  border-radius:50%;
+  border:2px solid rgba(0,191,255,0.2);
+  border-top-color:#00bfff;
+  animation:spin 2s linear infinite;
+  position:absolute;top:0;left:0;
+}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.shield-inner{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:2em;
+  animation:shieldPulse 1.5s ease-in-out infinite;
+}
+@keyframes shieldPulse{0%,100%{filter:drop-shadow(0 0 6px rgba(0,191,255,0.6))}50%{filter:drop-shadow(0 0 16px rgba(0,191,255,1))}}
+
+.scan-title{font-size:1.1em;font-weight:900;color:#fff;margin-bottom:4px}
+.scan-subtitle{font-size:0.72em;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+
+/* PROGRESS BAR */
+.prog-wrap{width:100%;margin-bottom:14px}
+.prog-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.prog-label{font-size:0.72em;font-weight:700;color:#00bfff;letter-spacing:0.5px}
+.prog-pct{font-size:0.72em;font-weight:700;color:#00bfff;font-family:'JetBrains Mono',monospace}
+.prog-track{
+  width:100%;height:8px;
+  background:rgba(0,191,255,0.08);
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid rgba(0,191,255,0.1);
+}
+.prog-fill{
+  height:100%;width:0%;
+  background:linear-gradient(90deg,#00bfff,#0077ff,#00bfff);
+  background-size:200% 100%;
+  border-radius:8px;
+  transition:width 0.5s ease;
+  animation:gradMove 2s linear infinite;
+  box-shadow:0 0 10px rgba(0,191,255,0.6);
+}
+@keyframes gradMove{0%{background-position:0% 0%}100%{background-position:200% 0%}}
+
+/* SCAN STEPS */
+.scan-steps{margin:16px 0;text-align:left}
+.scan-step{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 12px;
+  border-radius:8px;
+  margin-bottom:6px;
+  font-size:0.78em;
+  font-weight:600;
+  transition:all 0.4s ease;
+  opacity:0.35;
+}
+.scan-step.active{opacity:1;background:rgba(0,191,255,0.06);border:1px solid rgba(0,191,255,0.15)}
+.scan-step.done{opacity:0.7}
+.scan-step-icon{font-size:1em;flex-shrink:0;width:20px;text-align:center}
+.scan-step-text{color:#ccc;flex:1}
+.scan-step-status{font-size:0.65em;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.scan-step.active .scan-step-status{color:#00bfff}
+.scan-step.done .scan-step-status{color:#00ff88}
+.scan-step.pending .scan-step-status{color:#444}
+
+/* TERMINAL LOG */
+.terminal{
+  background:rgba(0,0,0,0.5);
+  border:1px solid rgba(0,191,255,0.1);
+  border-radius:8px;
+  padding:10px 12px;
+  margin:12px 0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.65em;
+  color:rgba(0,191,255,0.7);
+  text-align:left;
+  min-height:60px;
+  line-height:1.8;
+  overflow:hidden;
+}
+.terminal-line{display:block;animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.terminal-cursor{display:inline-block;width:6px;height:12px;background:#00bfff;animation:cursor 0.8s step-end infinite;vertical-align:middle;margin-left:2px}
+@keyframes cursor{0%,100%{opacity:1}50%{opacity:0}}
+
+/* REDIRECT BTN */
+.redirect-btn{
+  display:none;
+  width:100%;
+  padding:15px;
+  background:linear-gradient(135deg,#00bfff,#0077cc);
+  color:#000;
+  border:none;
+  border-radius:10px;
+  font-family:'Inter',sans-serif;
+  font-size:1em;
+  font-weight:900;
+  cursor:pointer;
+  margin-top:14px;
+  animation:popIn 0.4s ease;
+  box-shadow:0 4px 20px rgba(0,191,255,0.4);
+}
+@keyframes popIn{0%{transform:scale(0.9);opacity:0}100%{transform:scale(1);opacity:1}}
+.redirect-btn.show{display:block}
+.redirect-btn:hover{opacity:0.9}
+.redirect-btn:active{transform:scale(0.98)}
+
+.manual-link{
+  display:none;
+  margin-top:10px;
+  font-size:0.72em;
+  font-weight:700;
+  color:rgba(0,191,255,0.6);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  cursor:pointer;
+  text-align:center;
+}
+.manual-link.show{display:block}
+
+.scan-note{
+  font-size:0.65em;
+  color:rgba(255,255,255,0.15);
+  margin-top:14px;
+  letter-spacing:0.5px;
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <a class="topbar-brand" href="https://jizzybx.github.io">
+    <div class="topbar-icon">JB</div>
+    <span class="topbar-name">Jizzy B <span>(Dogyabhi)</span></span>
+  </a>
+  <div class="topbar-status">
+    <div class="status-dot"></div>
+    Scanning...
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- TOP BANNER -->
+  <div class="ad-wrap">
+    <div class="ad-label">advertisement</div>
+    <div data-mndbanid="cd65bd0a-9d1d-4729-b928-1e735cf623f8"></div>
+  </div>
+
+  <!-- SCAN CARD -->
+  <div class="scan-card">
+
+    <div class="shield-wrap">
+      <div class="shield-ring"></div>
+      <div class="shield-inner">🛡️</div>
+    </div>
+
+    <div class="scan-title">Security Scan in Progress</div>
+    <div class="scan-subtitle">Please wait while we verify your file</div>
+
+    <!-- MAIN PROGRESS BAR -->
+    <div class="prog-wrap">
+      <div class="prog-header">
+        <span class="prog-label" id="prog-label">Initializing scan...</span>
+        <span class="prog-pct" id="prog-pct">0%</span>
+      </div>
+      <div class="prog-track">
+        <div class="prog-fill" id="prog-fill"></div>
+      </div>
+    </div>
+
+    <!-- SCAN STEPS -->
+    <div class="scan-steps">
+      <div class="scan-step pending" id="step-0">
+        <span class="scan-step-icon">🔍</span>
+        <span class="scan-step-text">Checking file integrity</span>
+        <span class="scan-step-status" id="status-0">Pending</span>
+      </div>
+      <div class="scan-step pending" id="step-1">
+        <span class="scan-step-icon">🦠</span>
+        <span class="scan-step-text">Scanning for viruses & malware</span>
+        <span class="scan-step-status" id="status-1">Pending</span>
+      </div>
+      <div class="scan-step pending" id="step-2">
+        <span class="scan-step-icon">🔐</span>
+        <span class="scan-step-text">Verifying digital signature</span>
+        <span class="scan-step-status" id="status-2">Pending</span>
+      </div>
+      <div class="scan-step pending" id="step-3">
+        <span class="scan-step-icon">📦</span>
+        <span class="scan-step-text">Validating APK package</span>
+        <span class="scan-step-status" id="status-3">Pending</span>
+      </div>
+      <div class="scan-step pending" id="step-4">
+        <span class="scan-step-icon">✅</span>
+        <span class="scan-step-text">Preparing secure download link</span>
+        <span class="scan-step-status" id="status-4">Pending</span>
+      </div>
+    </div>
+
+    <!-- TERMINAL LOG -->
+    <div class="terminal" id="terminal">
+      <span class="terminal-line">&gt; Connecting to scan server...</span>
+      <span class="terminal-cursor"></span>
+    </div>
+
+    <!-- REDIRECT BUTTON -->
+    <button class="redirect-btn" id="redirect-btn" onclick="goToFile()">
+      ✅ File Verified — Download Now
+    </button>
+    <a class="manual-link" id="manual-link" onclick="goToFile()">↗ Not redirecting? Click here</a>
+
+    <div class="scan-note">🔒 All files are verified before download. Safe &amp; secure.</div>
+
+  </div>
+
+  <!-- BOTTOM BANNER -->
+  <div class="ad-wrap">
+    <div class="ad-label">advertisement</div>
+    <div data-mndbanid="cd65bd0a-9d1d-4729-b928-1e735cf623f8"></div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+
+  // GET DRIVE LINK FROM URL
+  var params = new URLSearchParams(window.location.search);
+  var raw = params.get('go');
+  var DEST = '';
+  try{
+    if(raw){
+      var decoded = decodeURIComponent(raw);
+      if(/^https?:\/\/.+/i.test(decoded)) DEST = decoded;
+    }
+  } catch(e){}
+
+  if(!DEST){
+    document.getElementById('prog-label').textContent = '⚠ Invalid file link';
+    return;
+  }
+
+  // SCAN TIMELINE — 7 seconds total
+  var TOTAL = 7000;
+
+  var STEPS = [
+    { time: 0,    stepIdx: 0, pct: 5,   label: 'Checking file integrity...', log: '> Connecting to scan server [OK]' },
+    { time: 800,  stepIdx: 0, pct: 18,  label: 'Analyzing file structure...', log: '> File hash verified: SHA-256 [MATCH]' },
+    { time: 1500, stepIdx: 1, pct: 32,  label: 'Scanning for viruses...', log: '> Malware database loaded: 14.2M signatures' },
+    { time: 2400, stepIdx: 1, pct: 50,  label: 'Virus scan in progress...', log: '> No threats detected [CLEAN]' },
+    { time: 3200, stepIdx: 2, pct: 64,  label: 'Verifying digital signature...', log: '> Certificate chain validated [OK]' },
+    { time: 4000, stepIdx: 3, pct: 78,  label: 'Validating APK package...', log: '> APK manifest parsed successfully' },
+    { time: 5000, stepIdx: 3, pct: 88,  label: 'Package validation complete...', log: '> All 47 permissions reviewed [SAFE]' },
+    { time: 5800, stepIdx: 4, pct: 96,  label: 'Preparing download link...', log: '> Generating secure download token...' },
+    { time: 6500, stepIdx: 4, pct: 100, label: '✅ Scan complete — File is safe!', log: '> RESULT: FILE IS CLEAN & SAFE TO DOWNLOAD' }
+  ];
+
+  var fill = document.getElementById('prog-fill');
+  var pctEl = document.getElementById('prog-pct');
+  var labelEl = document.getElementById('prog-label');
+  var terminal = document.getElementById('terminal');
+  var activeStep = -1;
+
+  function setStep(idx, done){
+    // Mark previous steps done
+    for(var i = 0; i < idx; i++){
+      var el = document.getElementById('step-' + i);
+      el.className = 'scan-step done';
+      document.getElementById('status-' + i).textContent = 'Done ✓';
+      document.getElementById('status-' + i).style.color = '#00ff88';
+    }
+    // Set current active
+    var cur = document.getElementById('step-' + idx);
+    cur.className = 'scan-step active';
+    document.getElementById('status-' + idx).textContent = 'Scanning...';
+    activeStep = idx;
+  }
+
+  function addLog(text){
+    var span = document.createElement('span');
+    span.className = 'terminal-line';
+    var color = text.indexOf('CLEAN') > -1 || text.indexOf('OK') > -1 || text.indexOf('SAFE') > -1 ? '#00ff88' : '#00bfff';
+    span.style.color = color;
+    span.textContent = text;
+    terminal.innerHTML = '';
+    terminal.appendChild(span);
+    var cursor = document.createElement('span');
+    cursor.className = 'terminal-cursor';
+    terminal.appendChild(cursor);
+  }
+
+  // Run scan timeline
+  STEPS.forEach(function(s){
+    setTimeout(function(){
+      if(fill) fill.style.width = s.pct + '%';
+      if(pctEl) pctEl.textContent = s.pct + '%';
+      if(labelEl) labelEl.textContent = s.label;
+      setStep(s.stepIdx, false);
+      addLog(s.log);
+    }, s.time);
+  });
+
+  // COMPLETION — mark all done, show button, auto redirect
+  setTimeout(function(){
+    // Mark all steps done
+    for(var i = 0; i <= 4; i++){
+      var el = document.getElementById('step-' + i);
+      el.className = 'scan-step done';
+      document.getElementById('status-' + i).textContent = 'Done ✓';
+      document.getElementById('status-' + i).style.color = '#00ff88';
+    }
+    // Show button
+    document.getElementById('redirect-btn').classList.add('show');
+    // Change topbar status
+    var statusEl = document.querySelector('.topbar-status');
+    if(statusEl){ statusEl.innerHTML = '<span style="color:#00ff88">✅ File Verified</span>'; }
+    // Auto redirect after 1 sec
+    setTimeout(function(){
+      goToFile();
+      // Show manual link if didn't redirect
+      setTimeout(function(){
+        document.getElementById('manual-link').classList.add('show');
+      }, 1500);
+    }, 1000);
+  }, TOTAL);
+
+  // GO TO FILE
+  window.goToFile = function(){
+    window.location.href = DEST;
+  };
+
+})();
+</script>
+
+</body>
+</html>
