@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Word Counter – Count Words, Characters and Sentences Instantly</title>
+<meta name="description" content="Count words, characters, and sentences instantly as you type. Free online word counter for essays, articles, and social posts. Includes social media character limits and read time."/>
+<meta name="keywords" content="word counter, character counter, sentence counter, text counter tool, online word count, free word counter"/>
+<meta property="og:title" content="Free Word Counter – Count Words and Characters Instantly"/>
+<meta property="og:description" content="Count words, characters, and sentences instantly as you type. Free, fast, accurate. Includes social media limits."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://jizzybx.github.io/linkgateway/word-counter.html"/>
+<script async src="https://ss.mrmnd.com/banner.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Free Word Counter","url":"https://jizzybx.github.io/linkgateway/word-counter.html","description":"Free online word counter. Count words, characters, sentences and paragraphs instantly as you type.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I count words in a text?","acceptedAnswer":{"@type":"Answer","text":"Simply paste or type your text into the text area above. The word counter updates instantly and shows your word count, character count, sentence count, and more in real time."}},{"@type":"Question","name":"Does the word counter count spaces?","acceptedAnswer":{"@type":"Answer","text":"Yes, the character count includes spaces. The tool also shows characters without spaces separately so you can see both counts."}},{"@type":"Question","name":"What is the Twitter character limit?","acceptedAnswer":{"@type":"Answer","text":"Twitter (X) has a 280 character limit per tweet. Our word counter shows a live bar indicating how close you are to the Twitter character limit as you type."}},{"@type":"Question","name":"How is read time calculated?","acceptedAnswer":{"@type":"Answer","text":"Read time is estimated based on the average adult reading speed of 200 words per minute. Divide your total word count by 200 to get the estimated read time in minutes."}}]}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--sky:#0099ff;--sky2:#0077cc;--sky3:rgba(0,153,255,0.08);--sky4:rgba(0,153,255,0.12);--bg:#f5f8ff;--card:#ffffff;--border:#e2eaf8;--text:#1a202c;--text2:#4a5568;--text3:#94a3b8;--green:#16a34a;--radius:12px;--shadow:0 2px 8px rgba(0,102,255,0.08)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;line-height:1.6;min-height:100vh}
+.topbar{background:#fff;border-bottom:2px solid var(--sky);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,102,255,0.06)}
+.topbar-brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+.topbar-icon{width:30px;height:30px;background:linear-gradient(135deg,var(--sky),var(--sky2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;font-weight:900}
+.topbar-name{font-size:1em;font-weight:800;color:var(--text)}
+.topbar-name span{color:var(--sky)}
+.topbar-tag{font-size:0.62em;color:var(--text3);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.page{max-width:700px;margin:0 auto;padding:0 14px 40px}
+.hero{text-align:center;padding:28px 0 16px}
+.hero-icon{font-size:2.8em;margin-bottom:10px;display:block}
+.hero h1{font-size:1.4em;font-weight:900;color:var(--text);margin-bottom:6px}
+.hero p{font-size:0.82em;color:var(--text2);max-width:480px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;box-shadow:var(--shadow)}
+.ad-wrap{text-align:center;margin:14px 0}
+.ad-label{font-size:0.55em;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.stat-box{background:var(--sky3);border:1px solid rgba(0,153,255,0.15);border-radius:10px;padding:14px;text-align:center}
+.stat-num{font-size:1.8em;font-weight:900;color:var(--sky);display:block;line-height:1.1}
+.stat-label{font-size:0.62em;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:3px;display:block}
+.more-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.mini-stat{background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center}
+.mini-num{font-size:1.1em;font-weight:800;color:var(--sky2);display:block}
+.mini-label{font-size:0.60em;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;display:block}
+textarea{width:100%;min-height:180px;padding:14px;border:2px solid var(--border);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88em;color:var(--text);background:#fff;outline:none;resize:vertical;transition:border-color 0.2s;line-height:1.7}
+textarea:focus{border-color:var(--sky)}
+textarea::placeholder{color:var(--text3)}
+.textarea-footer{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:8px;flex-wrap:wrap}
+.textarea-hint{font-size:0.68em;color:var(--text3)}
+.btn-small{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:transparent;border:2px solid var(--border);color:var(--text2);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.75em;font-weight:700;cursor:pointer;transition:all 0.15s}
+.btn-small:hover{border-color:var(--sky);color:var(--sky)}
+.btn-small:active{background:#111!important;color:#fff!important;border-color:#111}
+.social-limit-info{background:var(--sky3);border:1px solid rgba(0,153,255,0.15);border-radius:10px;padding:14px 16px;margin-top:10px}
+.social-limit-title{font-size:0.72em;font-weight:700;color:var(--sky);margin-bottom:10px}
+.limit-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.limit-name{font-size:0.72em;font-weight:600;color:var(--text2);min-width:80px}
+.limit-bar-wrap{flex:1;margin:0 10px;height:5px;background:var(--border);border-radius:5px;overflow:hidden}
+.limit-bar{height:100%;background:var(--sky);border-radius:5px;transition:width 0.3s ease,background 0.3s ease}
+.limit-count{font-size:0.68em;font-weight:700;color:var(--text2);min-width:70px;text-align:right}
+.copy-msg{display:none;font-size:0.72em;font-weight:700;color:var(--green)}
+.seo-content{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;box-shadow:var(--shadow)}
+.seo-content h2{font-size:1em;font-weight:800;color:var(--text);margin:16px 0 8px}
+.seo-content h2:first-child{margin-top:0}
+.seo-content h3{font-size:0.88em;font-weight:700;color:var(--sky);margin:12px 0 5px}
+.seo-content p{font-size:0.82em;color:var(--text2);line-height:1.8;margin-bottom:8px}
+.seo-content ul{margin:6px 0 8px 16px}
+.seo-content ul li{font-size:0.82em;color:var(--text2);line-height:1.8;margin-bottom:3px}
+.seo-content ul li::marker{color:var(--sky)}
+.seo-content strong{color:var(--text);font-weight:700}
+.tools-nav{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin:10px 0;box-shadow:var(--shadow)}
+.tools-nav-title{font-size:0.65em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.tool-link{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);transition:all 0.15s;font-size:0.80em;font-weight:600}
+.tool-link:hover{border-color:var(--sky);background:var(--sky3);color:var(--sky)}
+.tool-link.active{border-color:var(--sky);background:var(--sky4);color:var(--sky)}
+.share-section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin:10px 0;box-shadow:var(--shadow)}
+.share-row{display:flex;flex-wrap:wrap;gap:7px}
+.share-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:50px;font-size:0.70em;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity 0.15s}
+.share-btn:hover{opacity:0.85}
+.s-wa{background:#e7f9ee;color:#25D366}.s-tg{background:#e8f4fd;color:#2CA5E0}.s-fb{background:#e8effe;color:#1877F2}.s-tw{background:#f0f0f0;color:#000}.s-bk{background:#fffbeb;color:#d97706}
+footer{text-align:center;padding:20px 16px 28px;font-size:0.70em;color:var(--text3);border-top:1px solid var(--border);margin-top:8px}
+footer span{color:var(--sky);font-weight:700}
+#bk-msg{display:none;margin-top:8px;font-size:0.72em;font-weight:700;color:var(--sky);background:var(--sky3);padding:7px 12px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="topbar-brand" href="https://jizzybx.github.io/linkgateway/tools.html">
+    <div class="topbar-icon">🛠</div>
+    <span class="topbar-name">Jizzy B <span>Tools</span></span>
+  </a>
+  <span class="topbar-tag">Free Online Tools</span>
+</div>
+<div class="page">
+  <div class="hero">
+    <span class="hero-icon">📝</span>
+    <h1>Free Word Counter</h1>
+    <p>Count words, characters, and sentences instantly as you type or paste your text.</p>
+  </div>
+
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
+
+  <div class="stats-grid">
+    <div class="stat-box"><span class="stat-num" id="s-words">0</span><span class="stat-label">Words</span></div>
+    <div class="stat-box"><span class="stat-num" id="s-chars">0</span><span class="stat-label">Characters</span></div>
+    <div class="stat-box"><span class="stat-num" id="s-sentences">0</span><span class="stat-label">Sentences</span></div>
+  </div>
+
+  <div class="card">
+    <textarea id="txt" placeholder="Type or paste your text here... words, characters and sentences are counted live as you type!" oninput="countAll()"></textarea>
+    <div class="textarea-footer">
+      <span class="textarea-hint">⚡ Live counting — no button needed</span>
+      <div style="display:flex;gap:6px">
+        <button class="btn-small" onclick="copyText(this)">📋 Copy</button>
+        <button class="btn-small" onclick="clearText(this)">🗑 Clear</button>
+      </div>
+    </div>
+    <div class="copy-msg" id="copy-msg">✅ Text copied!</div>
+  </div>
+
+  <!-- MINI BANNER -->
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="e71d40c9-0d6d-481b-88c9-903559c8e46c"></div></div>
+
+  <div class="more-stats">
+    <div class="mini-stat"><span class="mini-num" id="s-paragraphs">0</span><span class="mini-label">Paragraphs</span></div>
+    <div class="mini-stat"><span class="mini-num" id="s-read-time">0 min</span><span class="mini-label">Read Time</span></div>
+    <div class="mini-stat"><span class="mini-num" id="s-chars-no-space">0</span><span class="mini-label">Chars (no space)</span></div>
+  </div>
+
+  <div class="social-limit-info">
+    <div class="social-limit-title">📱 Social Media Character Limits</div>
+    <div class="limit-row"><span class="limit-name">Twitter / X</span><div class="limit-bar-wrap"><div class="limit-bar" id="bar-twitter" style="width:0%"></div></div><span class="limit-count" id="cnt-twitter">0 / 280</span></div>
+    <div class="limit-row"><span class="limit-name">Instagram</span><div class="limit-bar-wrap"><div class="limit-bar" id="bar-instagram" style="width:0%"></div></div><span class="limit-count" id="cnt-instagram">0 / 2200</span></div>
+    <div class="limit-row"><span class="limit-name">Facebook</span><div class="limit-bar-wrap"><div class="limit-bar" id="bar-facebook" style="width:0%"></div></div><span class="limit-count" id="cnt-facebook">0 / 63206</span></div>
+    <div class="limit-row"><span class="limit-name">YouTube</span><div class="limit-bar-wrap"><div class="limit-bar" id="bar-youtube" style="width:0%"></div></div><span class="limit-count" id="cnt-youtube">0 / 5000</span></div>
+  </div>
+
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
+
+  <div class="seo-content">
+    <h2>How to Use This Word Counter</h2>
+    <p>Simply <strong>type or paste your text</strong> into the text area above. The word counter updates instantly in real time — no button clicks needed. You can see your word count, character count, sentence count, paragraph count, estimated read time, and social media character limit progress all at once.</p>
+
+    <h2>Why Use a Word Counter?</h2>
+    <ul>
+      <li><strong>Essays and assignments</strong> — stay within word count requirements for school or university work</li>
+      <li><strong>Social media posts</strong> — check against Twitter, Instagram, and Facebook character limits before posting</li>
+      <li><strong>Blog articles</strong> — track article length and estimate how long it takes to read</li>
+      <li><strong>SEO content</strong> — Google tends to rank longer, more comprehensive content higher in search results</li>
+      <li><strong>Copywriting</strong> — stay within ad copy character limits for Google Ads and Facebook Ads</li>
+    </ul>
+
+    <h2>What the Word Counter Measures</h2>
+    <h3>Words</h3>
+    <p>Counts the total number of words by splitting text on whitespace. Multiple spaces between words are handled correctly and do not inflate the count.</p>
+    <h3>Characters</h3>
+    <p>Shows total characters including spaces, and also characters without spaces separately. Both counts are useful depending on your platform's requirements.</p>
+    <h3>Sentences</h3>
+    <p>Counts sentence-ending punctuation marks (periods, exclamation marks, question marks) to estimate the number of sentences in your text.</p>
+    <h3>Read Time</h3>
+    <p>Estimated based on the average adult reading speed of <strong>200 words per minute</strong>. A 1000-word article takes approximately 5 minutes to read.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <h3>Does this count words in real time?</h3>
+    <p>Yes. The counter updates instantly with every keystroke as you type or edit your text. No need to click any button.</p>
+    <h3>What is the Twitter character limit?</h3>
+    <p>Twitter (X) allows 280 characters per tweet. The live bar above shows exactly how close you are to the limit as you type.</p>
+    <h3>Can I count words in a PDF or Word document?</h3>
+    <p>Simply copy the text from your PDF or Word document and paste it into the text area. The counter works with any text content.</p>
+  </div>
+
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
+
+  <div class="tools-nav">
+    <div class="tools-nav-title">🛠 More Free Tools</div>
+    <div class="tools-grid">
+      <a class="tool-link" href="age-calculator.html"><span>🎂</span>Age Calculator</a>
+      <a class="tool-link" href="password-generator.html"><span>🔐</span>Password Generator</a>
+      <a class="tool-link active" href="word-counter.html"><span>📝</span>Word Counter</a>
+      <a class="tool-link" href="qr-generator.html"><span>📱</span>QR Code Generator</a>
+    </div>
+  </div>
+
+  <div class="share-section">
+    <div style="font-size:0.70em;font-weight:700;color:var(--text2);margin-bottom:10px">📢 Share this tool!</div>
+    <div class="share-row">
+      <a class="share-btn s-wa" id="s-wa" href="#" target="_blank">📱 WhatsApp</a>
+      <a class="share-btn s-tg" id="s-tg" href="#" target="_blank">✈️ Telegram</a>
+      <a class="share-btn s-fb" id="s-fb" href="#" target="_blank">👍 Facebook</a>
+      <a class="share-btn s-tw" id="s-tw" href="#" target="_blank">✖ Twitter</a>
+      <button class="share-btn s-bk" onclick="bookmarkPage()">🔖 Bookmark</button>
+    </div>
+    <div id="bk-msg">📌 Press Ctrl+D (PC) or Share → Add to Home Screen (Mobile)!</div>
+  </div>
+
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
+</div>
+<footer>© 2026 <span>Jizzy B (Dogyabhi)</span> · Free Online Tools</footer>
+<script>
+function countAll(){
+  var txt=document.getElementById('txt').value;
+  var words=txt.trim()===''?0:txt.trim().split(/\s+/).length;
+  var chars=txt.length;
+  var charsNoSpace=txt.replace(/\s/g,'').length;
+  var sentences=txt.trim()===''?0:(txt.match(/[.!?]+/g)||[]).length;
+  var paragraphs=txt.trim()===''?0:txt.split(/\n\s*\n/).filter(function(p){return p.trim()!=='';}).length||1;
+  var readTime=Math.ceil(words/200);
+  document.getElementById('s-words').textContent=words.toLocaleString();
+  document.getElementById('s-chars').textContent=chars.toLocaleString();
+  document.getElementById('s-sentences').textContent=sentences.toLocaleString();
+  document.getElementById('s-paragraphs').textContent=paragraphs.toLocaleString();
+  document.getElementById('s-read-time').textContent=readTime+' min';
+  document.getElementById('s-chars-no-space').textContent=charsNoSpace.toLocaleString();
+  updateLimit('twitter',chars,280);
+  updateLimit('instagram',chars,2200);
+  updateLimit('facebook',chars,63206);
+  updateLimit('youtube',chars,5000);
+}
+
+function updateLimit(id,count,max){
+  var pct=Math.min(count/max*100,100);
+  var bar=document.getElementById('bar-'+id);
+  bar.style.width=pct+'%';
+  bar.style.background=pct>=100?'#dc2626':pct>=80?'#d97706':'#0099ff';
+  document.getElementById('cnt-'+id).textContent=count.toLocaleString()+' / '+max.toLocaleString();
+}
+
+function clearText(btn){
+  btn.classList.add('clicked');setTimeout(function(){btn.classList.remove('clicked');},400);
+  document.getElementById('txt').value='';countAll();
+}
+
+function copyText(btn){
+  var txt=document.getElementById('txt').value;
+  if(!txt){return;}
+  navigator.clipboard.writeText(txt).then(function(){
+    btn.classList.add('clicked');setTimeout(function(){btn.classList.remove('clicked');},500);
+    var msg=document.getElementById('copy-msg');msg.style.display='block';
+    setTimeout(function(){msg.style.display='none';},2000);
+  });
+}
+
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent('Free Word Counter – Count Words, Characters & Sentences Instantly!');
+document.getElementById('s-wa').href='https://wa.me/?text='+title+'%20'+url;
+document.getElementById('s-tg').href='https://t.me/share/url?url='+url+'&text='+title;
+document.getElementById('s-fb').href='https://www.facebook.com/sharer/sharer.php?u='+url;
+document.getElementById('s-tw').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+function bookmarkPage(){document.getElementById('bk-msg').style.display='block';}
+</script>
+</body>
+</html>
