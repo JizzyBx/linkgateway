@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title id="page-title">Facebook Video Downloader – Download FB Videos Free HD</title>
+<meta name="description" id="meta-desc" content="Download Facebook videos in HD and SD for free. Paste any Facebook video URL and save it instantly. Works on Android, iPhone and PC."/>
+<meta name="keywords" content="Facebook video downloader, download FB video, save Facebook video, Facebook video download HD, FB video downloader free"/>
+<meta property="og:title" id="og-title" content="Facebook Video Downloader – Download FB Videos Free HD"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://jizzybx.github.io/linkgateway/facebook-downloader.html"/>
+<script async src="https://ss.mrmnd.com/banner.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Facebook Video Downloader","url":"https://jizzybx.github.io/linkgateway/facebook-downloader.html","description":"Free Facebook video downloader. Download any public Facebook video in HD or SD quality instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I download Facebook videos?","acceptedAnswer":{"@type":"Answer","text":"Copy the Facebook video URL, paste it into the input field above, and click Download. Choose HD or SD quality and save the video."}},{"@type":"Question","name":"Can I download private Facebook videos?","acceptedAnswer":{"@type":"Answer","text":"No. This downloader only works with public Facebook videos. Private videos cannot be downloaded."}},{"@type":"Question","name":"Is Facebook video downloader free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no registration required."}},{"@type":"Question","name":"How do I copy a Facebook video link?","acceptedAnswer":{"@type":"Answer","text":"On Facebook, click the three dots on the video post and select Copy Link. On mobile, tap Share then Copy Link."}}]}</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--sky:#0099ff;--sky2:#0077cc;--sky3:rgba(0,153,255,0.08);--sky4:rgba(0,153,255,0.12);--bg:#f5f8ff;--card:#fff;--border:#e2eaf8;--text:#1a202c;--text2:#4a5568;--text3:#94a3b8;--green:#16a34a;--radius:12px;--shadow:0 2px 8px rgba(0,102,255,0.08)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;line-height:1.6;min-height:100vh}
+.topbar{background:#fff;border-bottom:2px solid var(--sky);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,102,255,0.06)}
+.topbar-brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+.topbar-icon{width:30px;height:30px;background:linear-gradient(135deg,var(--sky),var(--sky2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;font-weight:900}
+.topbar-name{font-size:1em;font-weight:800;color:var(--text)}
+.topbar-name span{color:var(--sky)}
+.topbar-tag{font-size:0.62em;color:var(--text3);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.page{max-width:700px;margin:0 auto;padding:0 14px 40px}
+.hero{text-align:center;padding:28px 0 16px}
+.hero-icon{font-size:2.8em;margin-bottom:10px;display:block}
+.hero h1{font-size:1.4em;font-weight:900;color:var(--text);margin-bottom:6px;line-height:1.3}
+.hero p{font-size:0.82em;color:var(--text2);max-width:500px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;box-shadow:var(--shadow)}
+.ad-wrap{text-align:center;margin:14px 0}
+.ad-label{font-size:0.55em;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.input-wrap{display:flex;gap:8px;margin-bottom:10px}
+.url-input{flex:1;padding:12px 14px;border:2px solid var(--border);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88em;color:var(--text);background:#fff;outline:none;transition:border-color 0.2s}
+.url-input:focus{border-color:var(--sky)}
+.paste-btn{padding:12px 14px;background:var(--sky3);border:2px solid rgba(0,153,255,0.2);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.78em;font-weight:700;color:var(--sky);cursor:pointer;white-space:nowrap}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff;border:none;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:1em;font-weight:800;cursor:pointer;transition:all 0.15s;box-shadow:0 3px 12px rgba(0,153,255,0.3)}
+.dl-btn:hover{opacity:0.92}
+.dl-btn:active,.dl-btn.clicked{background:#111!important;color:#fff;box-shadow:none}
+.result-area{display:none;margin-top:14px}
+.result-area.show{display:block;animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.dl-links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.dl-link-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88em;font-weight:800;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s}
+.dl-link-btn:hover{opacity:0.9}
+.btn-hd{background:linear-gradient(135deg,#16a34a,#15803d);color:#fff}
+.btn-sd{background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff}
+.error-box{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:14px;text-align:center;font-size:0.82em;font-weight:600;color:#dc2626}
+.info-box{background:var(--sky3);border:1px solid rgba(0,153,255,0.2);border-radius:10px;padding:14px;text-align:center;font-size:0.82em;color:var(--text2)}
+.how-steps{display:flex;flex-direction:column;gap:10px;margin:10px 0}
+.how-step{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--bg);border:1px solid var(--border);border-radius:10px}
+.step-num{width:28px;height:28px;background:var(--sky);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.78em;font-weight:900;flex-shrink:0}
+.step-text{font-size:0.82em;color:var(--text2);line-height:1.6}
+.step-text strong{color:var(--text)}
+.seo-content{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;box-shadow:var(--shadow)}
+.seo-content h2{font-size:1em;font-weight:800;color:var(--text);margin:16px 0 8px}
+.seo-content h2:first-child{margin-top:0}
+.seo-content h3{font-size:0.88em;font-weight:700;color:var(--sky);margin:12px 0 5px}
+.seo-content p{font-size:0.82em;color:var(--text2);line-height:1.8;margin-bottom:8px}
+.seo-content ul{margin:6px 0 8px 16px}
+.seo-content ul li{font-size:0.82em;color:var(--text2);line-height:1.8;margin-bottom:3px}
+.seo-content ul li::marker{color:var(--sky)}
+.seo-content strong{color:var(--text);font-weight:700}
+.other-tools{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin:10px 0;box-shadow:var(--shadow)}
+.other-tools-title{font-size:0.65em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.tool-link{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);font-size:0.80em;font-weight:600;transition:all 0.15s}
+.tool-link:hover{border-color:var(--sky);background:var(--sky3);color:var(--sky)}
+.tool-link.active{border-color:var(--sky);background:var(--sky4);color:var(--sky)}
+.share-section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin:10px 0;box-shadow:var(--shadow)}
+.share-row{display:flex;flex-wrap:wrap;gap:7px}
+.share-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:50px;font-size:0.70em;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:'Inter',sans-serif}
+.s-wa{background:#e7f9ee;color:#25D366}.s-tg{background:#e8f4fd;color:#2CA5E0}.s-fb{background:#e8effe;color:#1877F2}.s-tw{background:#f0f0f0;color:#000}.s-bk{background:#fffbeb;color:#d97706}
+footer{text-align:center;padding:20px 16px 28px;font-size:0.70em;color:var(--text3);border-top:1px solid var(--border);margin-top:8px}
+footer span{color:var(--sky);font-weight:700}
+#bk-msg{display:none;margin-top:8px;font-size:0.72em;font-weight:700;color:var(--sky);background:var(--sky3);padding:7px 12px;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="topbar-brand" href="https://jizzybx.github.io/linkgateway/downloaders.html">
+    <div class="topbar-icon">⬇</div>
+    <span class="topbar-name">Jizzy B <span>Downloaders</span></span>
+  </a>
+  <span class="topbar-tag">Free Video Tools</span>
+</div>
+<div class="page">
+  <div class="hero">
+    <span class="hero-icon">👍</span>
+    <h1 id="main-h1">Facebook Video Downloader – HD & SD Free</h1>
+    <p>Paste any Facebook video link and download it in HD or SD quality instantly. Free, no login needed.</p>
+  </div>
+
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
+
+  <div class="card">
+    <div class="input-wrap">
+      <input type="text" class="url-input" id="url-input" placeholder="Paste Facebook video link here..."/>
+      <button class="paste-btn" onclick="pasteURL()">📋 Paste</button>
+    </div>
+    <button class="dl-btn" id="dl-btn" onclick="startDownload(this)">⬇ Download Video</button>
+
+    <div style="text-align:center;margin:14px 0 10px">
+      <div style="font-size:0.55em;color:var(--text3);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">advertisement</div>
+      <div data-mndbanid="e71d40c9-0d6d-481b-88c9-903559c8e46c"></div>
+    </div>
+
+    <div class="result-area" id="result-area">
+      <div id="video-result"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-size:0.70em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:12px">📖 How to Download</div>
+    <div class="how-steps">
+      <div class="how-step"><div class="step-num">1</div><div class="step-text"><strong>Open Facebook</strong> and find the video you want</div></div>
+      <div class="how-step"><div class="step-num">2</div><div class="step-text"><strong>Click the 3 dots</strong> on the post and tap Copy Link</div></div>
+      <div class="how-step"><div class="step-num">3</div><div class="step-text"><strong>Paste the link</strong> into the input field above</div></div>
+      <div class="how-step"><div class="step-num">4</div><div class="step-text"><strong>Click Download</strong> and choose HD or SD quality</div></div>
+    </div>
+  </div>
+
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
+
+  <div class="seo-content">
+    <h2>Download Facebook Videos Free in HD Quality</h2>
+    <p>This free <strong>Facebook video downloader</strong> lets you save any public Facebook video directly to your device in HD or SD quality. No browser extension, no app, no registration — just paste the link and click download.</p>
+    <h2>What Types of Facebook Videos Can Be Downloaded?</h2>
+    <ul>
+      <li>Public Facebook posts with videos</li>
+      <li>Facebook Reels</li>
+      <li>Facebook Watch videos</li>
+      <li>Videos shared in public Facebook Groups</li>
+      <li>Facebook Stories (public)</li>
+    </ul>
+    <h2>HD vs SD — Which Should I Choose?</h2>
+    <p><strong>HD (High Definition)</strong> gives you the best video quality but a larger file size — ideal for saving to your gallery or sharing further. <strong>SD (Standard Definition)</strong> is smaller and faster to download — great for sharing on WhatsApp or Telegram where file size matters.</p>
+    <h2>Frequently Asked Questions</h2>
+    <h3>Why can't I download a private Facebook video?</h3>
+    <p>Private videos are not accessible without login authentication. This tool only works with public videos that anyone can view without logging in.</p>
+    <h3>Does this work on mobile?</h3>
+    <p>Yes. Works on Android and iPhone. On iPhone, long press the download button and select Download Linked File.</p>
+    <h3>Is there a limit on how many videos I can download?</h3>
+    <p>No limit. Download as many public Facebook videos as you need completely free.</p>
+  </div>
+
+  <div class="other-tools">
+    <div class="other-tools-title">⬇ More Downloaders</div>
+    <div class="tools-grid">
+      <a class="tool-link" href="tiktok-downloader.html"><span>🎵</span>TikTok</a>
+      <a class="tool-link active" href="facebook-downloader.html"><span>👍</span>Facebook</a>
+      <a class="tool-link" href="instagram-downloader.html"><span>📸</span>Instagram</a>
+      <a class="tool-link" href="twitter-downloader.html"><span>🐦</span>Twitter/X</a>
+      <a class="tool-link" href="pinterest-downloader.html"><span>📌</span>Pinterest</a>
+      <a class="tool-link" href="youtube-downloader.html"><span>▶️</span>YouTube</a>
+    </div>
+  </div>
+
+  <div class="share-section">
+    <div style="font-size:0.70em;font-weight:700;color:var(--text2);margin-bottom:10px">📢 Share this tool!</div>
+    <div class="share-row">
+      <a class="share-btn s-wa" id="s-wa" href="#" target="_blank">📱 WhatsApp</a>
+      <a class="share-btn s-tg" id="s-tg" href="#" target="_blank">✈️ Telegram</a>
+      <a class="share-btn s-fb" id="s-fb" href="#" target="_blank">👍 Facebook</a>
+      <a class="share-btn s-tw" id="s-tw" href="#" target="_blank">✖ Twitter</a>
+      <button class="share-btn s-bk" onclick="bookmarkPage()">🔖 Bookmark</button>
+    </div>
+    <div id="bk-msg">📌 Press Ctrl+D (PC) or Share → Add to Home Screen (Mobile)!</div>
+  </div>
+
+  <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
+</div>
+<footer>© 2026 <span>Jizzy B (Dogyabhi)</span> · Free Video Downloaders</footer>
+<script>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var q=params.get('q');
+  if(q){
+    var decoded=decodeURIComponent(q.replace(/\+/g,' '));
+    var t='Download '+decoded+' – Facebook Video Downloader Free HD';
+    document.title=t;
+    document.getElementById('page-title').textContent=t;
+    document.getElementById('main-h1').textContent='Download "'+decoded+'" from Facebook';
+    var md=document.getElementById('meta-desc');if(md)md.setAttribute('content','Download '+decoded+' from Facebook in HD quality. Free, instant, no login needed.');
+    var og=document.getElementById('og-title');if(og)og.setAttribute('content',t);
+  }
+})();
+
+function pasteURL(){navigator.clipboard.readText().then(function(t){document.getElementById('url-input').value=t;}).catch(function(){document.getElementById('url-input').focus();});}
+
+function startDownload(btn){
+  var url=document.getElementById('url-input').value.trim();
+  if(!url){alert('Please paste a Facebook video URL first!');return;}
+  if(url.indexOf('facebook.com')===-1&&url.indexOf('fb.watch')===-1){alert('Please enter a valid Facebook video URL.');return;}
+  btn.classList.add('clicked');btn.innerHTML='⏳ Processing...';
+
+  var resultArea=document.getElementById('result-area');
+  var videoResult=document.getElementById('video-result');
+  resultArea.classList.add('show');
+  videoResult.innerHTML='<div style="text-align:center;padding:16px;font-size:0.85em;font-weight:700;color:var(--sky)">🔍 Fetching video links...</div>';
+
+  // Use fdown.net redirect method
+  setTimeout(function(){
+    btn.classList.remove('clicked');btn.innerHTML='⬇ Download Video';
+    var encodedUrl=encodeURIComponent(url);
+    var hdLink='https://fdown.net/download.php?URLz='+encodedUrl+'&q=hd';
+    var sdLink='https://fdown.net/download.php?URLz='+encodedUrl+'&q=sd';
+    videoResult.innerHTML='<div class="info-box" style="margin-bottom:10px">✅ Video found! Choose your preferred quality below.</div><div class="dl-links"><a class="dl-link-btn btn-hd" href="'+hdLink+'" target="_blank">⬇ Download HD Quality</a><a class="dl-link-btn btn-sd" href="'+sdLink+'" target="_blank">⬇ Download SD Quality</a></div>';
+  },1200);
+}
+
+var url=encodeURIComponent(window.location.href);
+var title=encodeURIComponent('Free Facebook Video Downloader – Download FB Videos HD & SD!');
+document.getElementById('s-wa').href='https://wa.me/?text='+title+'%20'+url;
+document.getElementById('s-tg').href='https://t.me/share/url?url='+url+'&text='+title;
+document.getElementById('s-fb').href='https://www.facebook.com/sharer/sharer.php?u='+url;
+document.getElementById('s-tw').href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+function bookmarkPage(){document.getElementById('bk-msg').style.display='block';}
+</script>
+</body>
+</html>
