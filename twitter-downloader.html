@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title id="page-title">Twitter X Video Downloader – Download Tweets Videos Free</title>
-<meta name="description" id="meta-desc" content="Download Twitter and X videos for free. Paste any tweet URL with a video and save it instantly in HD quality."/>
-<meta name="keywords" content="Twitter video downloader, X video download, download tweet video, save Twitter video, Twitter MP4 downloader"/>
-<meta property="og:title" id="og-title" content="Twitter X Video Downloader – Download Tweets Videos Free"/>
+<title id="page-title">Twitter X Video Downloader – Download Tweet Videos Free HD</title>
+<meta name="description" id="meta-desc" content="Download Twitter and X videos for free. Paste any tweet URL with a video and save it instantly in HD quality. No login required, works on Android and iPhone."/>
+<meta name="keywords" content="Twitter video downloader, X video download, download tweet video, save Twitter video, Twitter MP4 downloader, X downloader free"/>
+<meta property="og:title" id="og-title" content="Twitter X Video Downloader – Download Tweet Videos Free HD"/>
 <meta name="robots" content="index,follow"/>
 <link rel="canonical" href="https://jizzybx.github.io/linkgateway/twitter-downloader.html"/>
 <script async src="https://ss.mrmnd.com/banner.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Twitter X Video Downloader","url":"https://jizzybx.github.io/linkgateway/twitter-downloader.html","description":"Free Twitter and X video downloader. Save any tweet video in HD quality instantly without login.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I download a Twitter video?","acceptedAnswer":{"@type":"Answer","text":"Open the tweet containing the video, tap Share and then Copy Link to Tweet. Paste that link into the input above and click Download to save the video."}},{"@type":"Question","name":"Does this work with X (formerly Twitter)?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both twitter.com and x.com links are supported. The platform was rebranded to X but the downloader works with links from both domains."}},{"@type":"Question","name":"Can I download Twitter GIFs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Twitter GIFs are actually MP4 video files and can be downloaded using this tool just like regular tweet videos."}},{"@type":"Question","name":"Is Twitter video downloading free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no account or registration required."}},{"@type":"Question","name":"What quality are downloaded Twitter videos?","acceptedAnswer":{"@type":"Answer","text":"Twitter videos are available in multiple quality levels. The downloader provides the highest quality version available for that tweet."}}]}</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -34,22 +36,21 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 .url-input{flex:1;padding:12px 14px;border:2px solid var(--border);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88em;color:var(--text);background:#fff;outline:none;transition:border-color 0.2s}
 .url-input:focus{border-color:var(--sky)}
 .paste-btn{padding:12px 14px;background:var(--sky3);border:2px solid rgba(0,153,255,0.2);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.78em;font-weight:700;color:var(--sky);cursor:pointer;white-space:nowrap}
-.dl-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff;border:none;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:1em;font-weight:800;cursor:pointer;transition:all 0.15s;box-shadow:0 3px 12px rgba(0,153,255,0.3)}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:linear-gradient(135deg,#000,#333);color:#fff;border:none;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:1em;font-weight:800;cursor:pointer;transition:all 0.15s;box-shadow:0 3px 12px rgba(0,0,0,0.2)}
 .dl-btn:hover{opacity:0.92}
-.dl-btn:active,.dl-btn.clicked{background:#111!important;color:#fff;box-shadow:none}
+.dl-btn:active,.dl-btn.clicked{background:#555!important;color:#fff}
 .result-area{display:none;margin-top:14px}
 .result-area.show{display:block;animation:fadeIn 0.3s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .dl-links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .dl-link-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88em;font-weight:800;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s}
 .dl-link-btn:hover{opacity:0.9}
-.btn-main{background:linear-gradient(135deg,#16a34a,#15803d);color:#fff}
+.btn-main{background:linear-gradient(135deg,#000,#222);color:#fff}
 .btn-alt{background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff}
-.error-box{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:14px;text-align:center;font-size:0.82em;font-weight:600;color:#dc2626}
 .info-box{background:var(--sky3);border:1px solid rgba(0,153,255,0.2);border-radius:10px;padding:14px;text-align:center;font-size:0.82em;color:var(--text2);margin-bottom:10px}
 .how-steps{display:flex;flex-direction:column;gap:10px;margin:10px 0}
 .how-step{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--bg);border:1px solid var(--border);border-radius:10px}
-.step-num{width:28px;height:28px;background:var(--sky);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.78em;font-weight:900;flex-shrink:0}
+.step-num{width:28px;height:28px;background:#000;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.78em;font-weight:900;flex-shrink:0}
 .step-text{font-size:0.82em;color:var(--text2);line-height:1.6}
 .step-text strong{color:var(--text)}
 .seo-content{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;box-shadow:var(--shadow)}
@@ -87,15 +88,15 @@ footer span{color:var(--sky);font-weight:700}
 <div class="page">
   <div class="hero">
     <span class="hero-icon">🐦</span>
-    <h1 id="main-h1">Twitter X Video Downloader – Download Tweets Videos Free</h1>
-    <p>Download Twitter and X videos for free. Paste any tweet URL with a video and save it instantly in HD quality.</p>
+    <h1 id="main-h1">Twitter / X Video Downloader – Download Tweet Videos Free</h1>
+    <p>Download any Twitter or X video in HD quality instantly. Paste tweet link and save. Free, no login needed.</p>
   </div>
 
   <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
 
   <div class="card">
     <div class="input-wrap">
-      <input type="text" class="url-input" id="url-input" placeholder="Paste Twitter/X tweet link here..."/>
+      <input type="text" class="url-input" id="url-input" placeholder="Paste Twitter or X tweet link here..."/>
       <button class="paste-btn" onclick="pasteURL()">📋 Paste</button>
     </div>
     <button class="dl-btn" id="dl-btn" onclick="startDownload(this)">⬇ Download Video</button>
@@ -107,29 +108,46 @@ footer span{color:var(--sky);font-weight:700}
   </div>
 
   <div class="card">
-    <div style="font-size:0.70em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:12px">📖 How to Download</div>
+    <div style="font-size:0.70em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:12px">📖 How to Download Twitter Videos</div>
     <div class="how-steps">
-      <div class="how-step"><div class="step-num">1</div><div class="step-text"><strong>Find the video</strong> you want to download</div></div>
-      <div class="how-step"><div class="step-num">2</div><div class="step-text"><strong>Copy the link</strong> using Share → Copy Link</div></div>
+      <div class="how-step"><div class="step-num">1</div><div class="step-text"><strong>Find the tweet</strong> containing the video you want to download</div></div>
+      <div class="how-step"><div class="step-num">2</div><div class="step-text"><strong>Tap Share</strong> then select <strong>Copy Link to Tweet</strong></div></div>
       <div class="how-step"><div class="step-num">3</div><div class="step-text"><strong>Paste the link</strong> into the input field above</div></div>
-      <div class="how-step"><div class="step-num">4</div><div class="step-text"><strong>Click Download</strong> and save your video</div></div>
+      <div class="how-step"><div class="step-num">4</div><div class="step-text"><strong>Click Download</strong> and save the video to your device</div></div>
     </div>
   </div>
 
   <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
 
   <div class="seo-content">
-    <h2>Download Twitter and X Videos for Free</h2>
-    <p>This free Twitter video downloader lets you save any video from a tweet to your device. Works with Twitter.com and X.com links. No app needed.</p>
-    <h2>Is This Downloader Free?</h2>
-    <p>Yes, completely free with no registration, no account, and no app installation required. Works directly in your browser on any device.</p>
+    <h2>Download Twitter and X Videos for Free in HD</h2>
+    <p>This free <strong>Twitter video downloader</strong> lets you save any video from a tweet directly to your phone or computer in HD quality. Works with both twitter.com and x.com links. No app installation, no account needed — just paste and download.</p>
+    <p>Twitter and X host millions of viral videos daily — breaking news clips, sports highlights, funny moments, music previews, and political speeches. Our downloader lets you save any of these videos to watch offline or share on other platforms.</p>
+
+    <h2>Types of Content You Can Download From Twitter/X</h2>
+    <ul>
+      <li><strong>Regular tweet videos</strong> — MP4 videos uploaded directly to tweets</li>
+      <li><strong>Twitter GIFs</strong> — animated GIFs which are actually MP4 files on Twitter</li>
+      <li><strong>Twitter Spaces recordings</strong> — when saved as video tweets</li>
+      <li><strong>Viral clips and highlights</strong> — sports, news, entertainment</li>
+      <li><strong>Quote tweet videos</strong> — videos embedded in quoted tweets</li>
+    </ul>
+
+    <h2>Twitter vs X — What's the Difference for Downloading?</h2>
+    <p>Twitter was rebranded to X in 2023. Both twitter.com and x.com URLs work exactly the same way for downloading. If you have an old twitter.com link or a new x.com link, paste either one — this downloader handles both without any issue.</p>
+
+    <h2>Can I Download HD Quality Twitter Videos?</h2>
+    <p>Yes. Twitter stores videos in multiple quality levels. This downloader fetches the <strong>highest quality version</strong> available for that specific tweet. For most videos this means HD quality at 720p or 1080p depending on what the original uploader posted.</p>
+
     <h2>Frequently Asked Questions</h2>
-    <h3>Does this work on Android and iPhone?</h3>
-    <p>Yes. The downloader works on all devices including Android phones, iPhones, tablets, and desktop computers.</p>
-    <h3>Why isn't my link working?</h3>
-    <p>Make sure you copy the full URL including https://. Some short links need to be opened in a browser first to get the full URL. Also ensure the content is public and not private.</p>
-    <h3>Is there a video size limit?</h3>
-    <p>No size limit. You can download videos of any length or file size completely free.</p>
+    <h3>Can I download videos from private Twitter accounts?</h3>
+    <p>No. Private account tweets are not publicly accessible. This tool only works with videos from public tweets and accounts.</p>
+    <h3>Does it download Twitter GIFs?</h3>
+    <p>Yes. Twitter GIFs are stored as looping MP4 files and can be downloaded just like regular videos.</p>
+    <h3>Why does my tweet URL not work?</h3>
+    <p>Make sure you are copying the direct tweet URL and not a share preview link. The URL should look like twitter.com/username/status/1234567890 or x.com/username/status/1234567890.</p>
+    <h3>Is there a size limit for Twitter video downloads?</h3>
+    <p>No size limit. Download any Twitter video regardless of length or file size completely free.</p>
   </div>
 
   <div class="other-tools">
@@ -138,7 +156,7 @@ footer span{color:var(--sky);font-weight:700}
       <a class="tool-link" href="tiktok-downloader.html"><span>🎵</span>TikTok</a>
       <a class="tool-link" href="facebook-downloader.html"><span>👍</span>Facebook</a>
       <a class="tool-link" href="instagram-downloader.html"><span>📸</span>Instagram</a>
-      <a class="tool-link" href="twitter-downloader.html"><span>🐦</span>Twitter/X</a>
+      <a class="tool-link active" href="twitter-downloader.html"><span>🐦</span>Twitter/X</a>
       <a class="tool-link" href="pinterest-downloader.html"><span>📌</span>Pinterest</a>
       <a class="tool-link" href="youtube-downloader.html"><span>▶️</span>YouTube</a>
     </div>
@@ -165,18 +183,18 @@ footer span{color:var(--sky);font-weight:700}
   var q=params.get('q');
   if(q){
     var decoded=decodeURIComponent(q.replace(/\+/g,' '));
-    var t='Download '+decoded+' – Twitter X Video Downloader – Download Tweets Videos Free';
-    document.title=t;
-    document.getElementById('page-title').textContent=t;
-    document.getElementById('main-h1').textContent='Download "'+decoded+'"';
-    var md=document.getElementById('meta-desc');if(md)md.setAttribute('content','Download '+decoded+' free. Fast and instant.');
+    var t='Download '+decoded+' – Twitter X Video Downloader Free';
+    document.title=t;document.getElementById('page-title').textContent=t;
+    document.getElementById('main-h1').textContent='Download "'+decoded+'" from Twitter/X';
+    var md=document.getElementById('meta-desc');if(md)md.setAttribute('content','Download '+decoded+' from Twitter or X free. HD quality, instant download.');
     var og=document.getElementById('og-title');if(og)og.setAttribute('content',t);
   }
 })();
 function pasteURL(){navigator.clipboard.readText().then(function(t){document.getElementById('url-input').value=t;}).catch(function(){document.getElementById('url-input').focus();});}
 function startDownload(btn){
   var url=document.getElementById('url-input').value.trim();
-  if(!url){alert('Please paste a video URL first!');return;}
+  if(!url){alert('Please paste a Twitter/X tweet URL first!');return;}
+  if(url.indexOf('twitter.com')===-1&&url.indexOf('x.com')===-1){alert('Please enter a valid Twitter or X URL.');return;}
   btn.classList.add('clicked');btn.innerHTML='⏳ Processing...';
   var resultArea=document.getElementById('result-area');
   var videoResult=document.getElementById('video-result');
@@ -185,16 +203,11 @@ function startDownload(btn){
   var encodedUrl=encodeURIComponent(url);
   setTimeout(function(){
     btn.classList.remove('clicked');btn.innerHTML='⬇ Download Video';
-    var link1,link2,label1,label2;
-    if('twitter'==='instagram'){link1='https://igram.world/en?url='+encodedUrl;label1='⬇ Download from Instagram';link2='https://snapinsta.app/?url='+encodedUrl;label2='⬇ Alternative Download';}
-    else if('twitter'==='twitter'){link1='https://twitsave.com/info?url='+encodedUrl;label1='⬇ Download Twitter Video';link2='https://ssstwitter.com/?url='+encodedUrl;label2='⬇ Alternative Download';}
-    else if('twitter'==='pinterest'){link1='https://pinterestdownloader.com/?url='+encodedUrl;label1='⬇ Download Pinterest Video';link2='https://pinsave.app/?url='+encodedUrl;label2='⬇ Alternative Download';}
-    else if('twitter'==='youtube'){link1='https://cobalt.tools/';label1='▶ Open cobalt.tools (Best YT Downloader)';link2='https://www.y2mate.com/';label2='▶ Open Y2Mate Alternative';}
-    videoResult.innerHTML='<div class="info-box">✅ Click below to download your video!</div><div class="dl-links"><a class="dl-link-btn btn-main" href="'+link1+'" target="_blank">'+label1+'</a><a class="dl-link-btn btn-alt" href="'+link2+'" target="_blank">'+label2+'</a></div>';
+    videoResult.innerHTML='<div class="info-box">✅ Click below to download your Twitter video!</div><div class="dl-links"><a class="dl-link-btn btn-main" href="https://twitsave.com/info?url='+encodedUrl+'" target="_blank">⬇ Download via twitsave.com</a><a class="dl-link-btn btn-alt" href="https://ssstwitter.com/?url='+encodedUrl+'" target="_blank">⬇ Alternative – ssstwitter.com</a></div>';
   },1000);
 }
 var url=encodeURIComponent(window.location.href);
-var title=encodeURIComponent('Twitter X Video Downloader – Download Tweets Videos Free');
+var title=encodeURIComponent('Free Twitter X Video Downloader – Download Tweet Videos in HD!');
 document.getElementById('s-wa').href='https://wa.me/?text='+title+'%20'+url;
 document.getElementById('s-tg').href='https://t.me/share/url?url='+url+'&text='+title;
 document.getElementById('s-fb').href='https://www.facebook.com/sharer/sharer.php?u='+url;

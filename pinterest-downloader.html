@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title id="page-title">Pinterest Video Downloader – Download Pinterest Videos Free</title>
-<meta name="description" id="meta-desc" content="Download Pinterest videos and GIFs for free. Paste any Pinterest pin URL and save the video instantly."/>
-<meta name="keywords" content="Pinterest video downloader, download Pinterest video, save Pinterest pin, Pinterest GIF download, Pinterest MP4"/>
+<title id="page-title">Pinterest Video Downloader – Download Pinterest Videos and GIFs Free</title>
+<meta name="description" id="meta-desc" content="Download Pinterest videos and GIFs for free. Paste any Pinterest pin URL and save the video instantly to your device. No login required."/>
+<meta name="keywords" content="Pinterest video downloader, download Pinterest video, save Pinterest pin, Pinterest GIF download, Pinterest MP4 free"/>
 <meta property="og:title" id="og-title" content="Pinterest Video Downloader – Download Pinterest Videos Free"/>
 <meta name="robots" content="index,follow"/>
 <link rel="canonical" href="https://jizzybx.github.io/linkgateway/pinterest-downloader.html"/>
 <script async src="https://ss.mrmnd.com/banner.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Pinterest Video Downloader","url":"https://jizzybx.github.io/linkgateway/pinterest-downloader.html","description":"Free Pinterest video downloader. Save any Pinterest video pin or GIF instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I download a Pinterest video?","acceptedAnswer":{"@type":"Answer","text":"Open the Pinterest pin with a video, tap Share and copy the pin link. Paste it into the input above and click Download to save the video."}},{"@type":"Question","name":"Can I download Pinterest GIFs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pinterest GIFs are stored as video files and can be downloaded using this tool."}},{"@type":"Question","name":"Is Pinterest video downloader free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no account or registration needed."}},{"@type":"Question","name":"Does this work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. Works on Android and iPhone directly in the browser without any app installation."}},{"@type":"Question","name":"Why can't I download a Pinterest image?","acceptedAnswer":{"@type":"Answer","text":"This tool is specifically for Pinterest video pins and GIFs. For images, you can long press and save them directly in the Pinterest app."}}]}</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sky:#0099ff;--sky2:#0077cc;--sky3:rgba(0,153,255,0.08);--sky4:rgba(0,153,255,0.12);--bg:#f5f8ff;--card:#fff;--border:#e2eaf8;--text:#1a202c;--text2:#4a5568;--text3:#94a3b8;--green:#16a34a;--radius:12px;--shadow:0 2px 8px rgba(0,102,255,0.08)}
+:root{--sky:#0099ff;--sky2:#0077cc;--sky3:rgba(0,153,255,0.08);--sky4:rgba(0,153,255,0.12);--bg:#f5f8ff;--card:#fff;--border:#e2eaf8;--text:#1a202c;--text2:#4a5568;--text3:#94a3b8;--green:#16a34a;--red:#e60023;--radius:12px;--shadow:0 2px 8px rgba(0,102,255,0.08)}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;line-height:1.6;min-height:100vh}
 .topbar{background:#fff;border-bottom:2px solid var(--sky);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,102,255,0.06)}
@@ -34,7 +36,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 .url-input{flex:1;padding:12px 14px;border:2px solid var(--border);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88em;color:var(--text);background:#fff;outline:none;transition:border-color 0.2s}
 .url-input:focus{border-color:var(--sky)}
 .paste-btn{padding:12px 14px;background:var(--sky3);border:2px solid rgba(0,153,255,0.2);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.78em;font-weight:700;color:var(--sky);cursor:pointer;white-space:nowrap}
-.dl-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff;border:none;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:1em;font-weight:800;cursor:pointer;transition:all 0.15s;box-shadow:0 3px 12px rgba(0,153,255,0.3)}
+.dl-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:linear-gradient(135deg,var(--red),#c0001d);color:#fff;border:none;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:1em;font-weight:800;cursor:pointer;transition:all 0.15s;box-shadow:0 3px 12px rgba(230,0,35,0.3)}
 .dl-btn:hover{opacity:0.92}
 .dl-btn:active,.dl-btn.clicked{background:#111!important;color:#fff;box-shadow:none}
 .result-area{display:none;margin-top:14px}
@@ -43,13 +45,12 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 .dl-links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .dl-link-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88em;font-weight:800;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s}
 .dl-link-btn:hover{opacity:0.9}
-.btn-main{background:linear-gradient(135deg,#16a34a,#15803d);color:#fff}
+.btn-main{background:linear-gradient(135deg,var(--red),#c0001d);color:#fff}
 .btn-alt{background:linear-gradient(135deg,var(--sky),var(--sky2));color:#fff}
-.error-box{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:14px;text-align:center;font-size:0.82em;font-weight:600;color:#dc2626}
 .info-box{background:var(--sky3);border:1px solid rgba(0,153,255,0.2);border-radius:10px;padding:14px;text-align:center;font-size:0.82em;color:var(--text2);margin-bottom:10px}
 .how-steps{display:flex;flex-direction:column;gap:10px;margin:10px 0}
 .how-step{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--bg);border:1px solid var(--border);border-radius:10px}
-.step-num{width:28px;height:28px;background:var(--sky);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.78em;font-weight:900;flex-shrink:0}
+.step-num{width:28px;height:28px;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.78em;font-weight:900;flex-shrink:0}
 .step-text{font-size:0.82em;color:var(--text2);line-height:1.6}
 .step-text strong{color:var(--text)}
 .seo-content{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:12px 0;box-shadow:var(--shadow)}
@@ -59,7 +60,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 .seo-content p{font-size:0.82em;color:var(--text2);line-height:1.8;margin-bottom:8px}
 .seo-content ul{margin:6px 0 8px 16px}
 .seo-content ul li{font-size:0.82em;color:var(--text2);line-height:1.8;margin-bottom:3px}
-.seo-content ul li::marker{color:var(--sky)}
+.seo-content ul li::marker{color:var(--red)}
 .seo-content strong{color:var(--text);font-weight:700}
 .other-tools{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin:10px 0;box-shadow:var(--shadow)}
 .other-tools-title{font-size:0.65em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
@@ -87,8 +88,8 @@ footer span{color:var(--sky);font-weight:700}
 <div class="page">
   <div class="hero">
     <span class="hero-icon">📌</span>
-    <h1 id="main-h1">Pinterest Video Downloader – Download Pinterest Videos Free</h1>
-    <p>Download Pinterest videos and GIFs for free. Paste any Pinterest pin URL and save the video instantly.</p>
+    <h1 id="main-h1">Pinterest Video Downloader – Download Videos & GIFs Free</h1>
+    <p>Save any Pinterest video pin or GIF instantly to your device. Free, fast, no login needed.</p>
   </div>
 
   <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
@@ -107,29 +108,44 @@ footer span{color:var(--sky);font-weight:700}
   </div>
 
   <div class="card">
-    <div style="font-size:0.70em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:12px">📖 How to Download</div>
+    <div style="font-size:0.70em;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:12px">📖 How to Download Pinterest Videos</div>
     <div class="how-steps">
-      <div class="how-step"><div class="step-num">1</div><div class="step-text"><strong>Find the video</strong> you want to download</div></div>
-      <div class="how-step"><div class="step-num">2</div><div class="step-text"><strong>Copy the link</strong> using Share → Copy Link</div></div>
+      <div class="how-step"><div class="step-num">1</div><div class="step-text"><strong>Open Pinterest</strong> and find the video pin you want</div></div>
+      <div class="how-step"><div class="step-num">2</div><div class="step-text"><strong>Tap Share → Copy Link</strong> to copy the pin URL</div></div>
       <div class="how-step"><div class="step-num">3</div><div class="step-text"><strong>Paste the link</strong> into the input field above</div></div>
-      <div class="how-step"><div class="step-num">4</div><div class="step-text"><strong>Click Download</strong> and save your video</div></div>
+      <div class="how-step"><div class="step-num">4</div><div class="step-text"><strong>Click Download</strong> and save to your device</div></div>
     </div>
   </div>
 
   <div class="ad-wrap"><div class="ad-label">advertisement</div><div data-mndbanid="6f80ae16-1847-403b-8854-2e3461045e8d"></div></div>
 
   <div class="seo-content">
-    <h2>Download Pinterest Videos and GIFs Free</h2>
-    <p>This free Pinterest video downloader lets you save any video pin or animated GIF from Pinterest directly to your device.</p>
-    <h2>Is This Downloader Free?</h2>
-    <p>Yes, completely free with no registration, no account, and no app installation required. Works directly in your browser on any device.</p>
+    <h2>Download Pinterest Videos and GIFs for Free</h2>
+    <p>This free <strong>Pinterest video downloader</strong> lets you save any video pin or animated GIF from Pinterest directly to your phone or computer. No app installation, no Pinterest account needed — paste the pin link and download in seconds.</p>
+    <p>Pinterest is home to millions of creative video pins covering home decor ideas, DIY tutorials, recipe videos, fashion clips, workout routines, and much more. Now you can save all of these to your device and access them offline whenever you need them.</p>
+
+    <h2>What Pinterest Content Can You Download?</h2>
+    <ul>
+      <li><strong>Pinterest video pins</strong> — regular video content uploaded to Pinterest</li>
+      <li><strong>Pinterest GIFs</strong> — animated GIF pins saved as MP4 format</li>
+      <li><strong>Pinterest Idea Pins</strong> — story-style multi-slide video content</li>
+      <li><strong>Short-form video pins</strong> — recipe clips, DIY tutorials, fashion videos</li>
+      <li><strong>Promoted video pins</strong> — public video advertisements on Pinterest</li>
+    </ul>
+
+    <h2>Why Download Pinterest Videos?</h2>
+    <p>Pinterest is a discovery platform, not a social media feed. People use it to save ideas for projects, recipes, fashion, and home design. Downloading those video tutorials means you can follow along without needing an internet connection — perfect for cooking in the kitchen or working on a craft project.</p>
+    <p>Content creators also download Pinterest videos to use as reference material or for video editing projects. Just make sure to respect copyright and only use downloaded content for personal purposes.</p>
+
     <h2>Frequently Asked Questions</h2>
-    <h3>Does this work on Android and iPhone?</h3>
-    <p>Yes. The downloader works on all devices including Android phones, iPhones, tablets, and desktop computers.</p>
-    <h3>Why isn't my link working?</h3>
-    <p>Make sure you copy the full URL including https://. Some short links need to be opened in a browser first to get the full URL. Also ensure the content is public and not private.</p>
-    <h3>Is there a video size limit?</h3>
-    <p>No size limit. You can download videos of any length or file size completely free.</p>
+    <h3>Can I download Pinterest images too?</h3>
+    <p>This tool is specifically for video pins and GIFs. For regular Pinterest images, you can long press on the image in the Pinterest app and save it directly to your gallery.</p>
+    <h3>Do Pinterest short links work?</h3>
+    <p>Yes. Both full pinterest.com links and short pin.it links are supported.</p>
+    <h3>What format are downloaded Pinterest videos?</h3>
+    <p>Pinterest videos are downloaded as MP4 files which are compatible with all devices and video players.</p>
+    <h3>Is there any cost to use this downloader?</h3>
+    <p>No, it is completely free with no hidden charges, no subscription, and no account required.</p>
   </div>
 
   <div class="other-tools">
@@ -139,7 +155,7 @@ footer span{color:var(--sky);font-weight:700}
       <a class="tool-link" href="facebook-downloader.html"><span>👍</span>Facebook</a>
       <a class="tool-link" href="instagram-downloader.html"><span>📸</span>Instagram</a>
       <a class="tool-link" href="twitter-downloader.html"><span>🐦</span>Twitter/X</a>
-      <a class="tool-link" href="pinterest-downloader.html"><span>📌</span>Pinterest</a>
+      <a class="tool-link active" href="pinterest-downloader.html"><span>📌</span>Pinterest</a>
       <a class="tool-link" href="youtube-downloader.html"><span>▶️</span>YouTube</a>
     </div>
   </div>
@@ -165,18 +181,18 @@ footer span{color:var(--sky);font-weight:700}
   var q=params.get('q');
   if(q){
     var decoded=decodeURIComponent(q.replace(/\+/g,' '));
-    var t='Download '+decoded+' – Pinterest Video Downloader – Download Pinterest Videos Free';
-    document.title=t;
-    document.getElementById('page-title').textContent=t;
-    document.getElementById('main-h1').textContent='Download "'+decoded+'"';
-    var md=document.getElementById('meta-desc');if(md)md.setAttribute('content','Download '+decoded+' free. Fast and instant.');
+    var t='Download '+decoded+' – Pinterest Video Downloader Free';
+    document.title=t;document.getElementById('page-title').textContent=t;
+    document.getElementById('main-h1').textContent='Download "'+decoded+'" from Pinterest';
+    var md=document.getElementById('meta-desc');if(md)md.setAttribute('content','Download '+decoded+' from Pinterest free. Save video pins and GIFs instantly.');
     var og=document.getElementById('og-title');if(og)og.setAttribute('content',t);
   }
 })();
 function pasteURL(){navigator.clipboard.readText().then(function(t){document.getElementById('url-input').value=t;}).catch(function(){document.getElementById('url-input').focus();});}
 function startDownload(btn){
   var url=document.getElementById('url-input').value.trim();
-  if(!url){alert('Please paste a video URL first!');return;}
+  if(!url){alert('Please paste a Pinterest pin URL first!');return;}
+  if(url.indexOf('pinterest')===-1&&url.indexOf('pin.it')===-1){alert('Please enter a valid Pinterest URL.');return;}
   btn.classList.add('clicked');btn.innerHTML='⏳ Processing...';
   var resultArea=document.getElementById('result-area');
   var videoResult=document.getElementById('video-result');
@@ -185,16 +201,11 @@ function startDownload(btn){
   var encodedUrl=encodeURIComponent(url);
   setTimeout(function(){
     btn.classList.remove('clicked');btn.innerHTML='⬇ Download Video';
-    var link1,link2,label1,label2;
-    if('pinterest'==='instagram'){link1='https://igram.world/en?url='+encodedUrl;label1='⬇ Download from Instagram';link2='https://snapinsta.app/?url='+encodedUrl;label2='⬇ Alternative Download';}
-    else if('pinterest'==='twitter'){link1='https://twitsave.com/info?url='+encodedUrl;label1='⬇ Download Twitter Video';link2='https://ssstwitter.com/?url='+encodedUrl;label2='⬇ Alternative Download';}
-    else if('pinterest'==='pinterest'){link1='https://pinterestdownloader.com/?url='+encodedUrl;label1='⬇ Download Pinterest Video';link2='https://pinsave.app/?url='+encodedUrl;label2='⬇ Alternative Download';}
-    else if('pinterest'==='youtube'){link1='https://cobalt.tools/';label1='▶ Open cobalt.tools (Best YT Downloader)';link2='https://www.y2mate.com/';label2='▶ Open Y2Mate Alternative';}
-    videoResult.innerHTML='<div class="info-box">✅ Click below to download your video!</div><div class="dl-links"><a class="dl-link-btn btn-main" href="'+link1+'" target="_blank">'+label1+'</a><a class="dl-link-btn btn-alt" href="'+link2+'" target="_blank">'+label2+'</a></div>';
+    videoResult.innerHTML='<div class="info-box">✅ Click below to download your Pinterest video!</div><div class="dl-links"><a class="dl-link-btn btn-main" href="https://pinterestdownloader.com/?url='+encodedUrl+'" target="_blank">⬇ Download via pinterestdownloader.com</a><a class="dl-link-btn btn-alt" href="https://pinsave.app/?url='+encodedUrl+'" target="_blank">⬇ Alternative – pinsave.app</a></div>';
   },1000);
 }
 var url=encodeURIComponent(window.location.href);
-var title=encodeURIComponent('Pinterest Video Downloader – Download Pinterest Videos Free');
+var title=encodeURIComponent('Free Pinterest Video Downloader – Download Pinterest Videos & GIFs!');
 document.getElementById('s-wa').href='https://wa.me/?text='+title+'%20'+url;
 document.getElementById('s-tg').href='https://t.me/share/url?url='+url+'&text='+title;
 document.getElementById('s-fb').href='https://www.facebook.com/sharer/sharer.php?u='+url;
