@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Guides & Info – Jizzy B</title>
+<meta name="description" content="Guides and info hub."/>
+<style>
+  body{font-family:-apple-system,Roboto,Arial,sans-serif;background:#f5f6f8;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;min-height:100vh}
+  .wrap{width:92%;max-width:640px;margin-top:30px}
+  h1{font-size:1.3em;text-align:center;color:#222;margin-bottom:22px}
+  .card{display:block;background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:18px 16px;margin-bottom:14px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .15s}
+  .card:active{transform:scale(0.98)}
+  .card-title{font-size:1.05em;font-weight:bold;color:#222;margin-bottom:6px}
+  .card-desc{font-size:0.85em;color:#777}
+  .arrow{float:right;color:#007bff;font-weight:bold}
+  footer{margin:30px 0 20px;font-size:0.75em;color:#999;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Guides & Info</h1>
+
+  <a class="card" href="Purpose-of-ArcComic-and-QuickAid-Channels.html">
+    <div class="card-title">How to Use ArcComic & QuickAid <span class="arrow">→</span></div>
+    <div class="card-desc">Start here — how our channels work together.</div>
+  </a>
+
+  <a class="card" href="How-Ratings-System-Works-ArcComic.html">
+    <div class="card-title">Ratings System Guide <span class="arrow">→</span></div>
+    <div class="card-desc">How our content rating system works.</div>
+  </a>
+
+  <a class="card" href="How-to-Convert-Hentai-Comic-Codes-ArcComicBot.html">
+    <div class="card-title">Code Conversion Guide <span class="arrow">→</span></div>
+    <div class="card-desc">How to use the bot to convert content codes.</div>
+  </a>
+
+  <h1 style="margin-top:26px">Our Channels</h1>
+
+  <a class="card" href="https://t.me/+O11cl5Kv8_xkYzQ9">
+    <div class="card-title">Arc Comic (Art & Story) <span class="arrow">→</span></div>
+    <div class="card-desc">Join the main channel.</div>
+  </a>
+
+  <a class="card" href="https://t.me/+Zl3tNpmJDf4wNjJl">
+    <div class="card-title">QuickAid Comic <span class="arrow">→</span></div>
+    <div class="card-desc">Join the QuickAid channel.</div>
+  </a>
+
+  <a class="card" href="https://t.me/ArcComicBot">
+    <div class="card-title">Arc Comics Bot <span class="arrow">→</span></div>
+    <div class="card-desc">Open the bot.</div>
+  </a>
+
+</div>
+<footer>Jizzy B (Dogyabhi)</footer>
+<div id="view-count" style="text-align:center;font-size:0.75em;color:#aaa;margin-bottom:20px">Loading views...</div>
+<script>
+  fetch('https://abacus.jasoncameron.dev/hit/jizzybx-linkgateway/hub-page-views')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('view-count').textContent = '👁 ' + data.value + ' views';
+    })
+    .catch(() => {
+      document.getElementById('view-count').textContent = '';
+    });
+</script>
+</body>
+</html>
