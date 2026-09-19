@@ -221,8 +221,13 @@ body{background:#f0f2f5;color:#222;font-family:'Segoe UI',Arial,sans-serif;font-
   function doFinal(){
     if(!unlocked)return;
     if(nextBtn)nextBtn.classList.add('clicked');
-    // Smartlink opens in a new tab first, then file opens in a new tab (same as the old flow)
-    window.open('https://www.profitableratecpmnetwork.com/f73czrszp3?key=940f9986aad1efe84e1ae63a3622783f','_blank');
+    // Smartlink fires ONCE per visitor (saved in browser), after that GO opens only the file
+    var adShown=false;
+    try{adShown=localStorage.getItem('gw_smartlink_shown')==='1';}catch(e){}
+    if(!adShown){
+      try{localStorage.setItem('gw_smartlink_shown','1');}catch(e){}
+      window.open('https://www.profitableratecpmnetwork.com/f73czrszp3?key=940f9986aad1efe84e1ae63a3622783f','_blank');
+    }
     window.open(DEST,'_blank');
   }
 
